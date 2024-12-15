@@ -1,6 +1,8 @@
 "use client";
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,7 +11,6 @@ import {
 } from "../ui/navigation-menu";
 import { Button } from "../ui/button";
 import Logo from "../logo";
-import Link from "next/link";
 
 const navMenu = [
   {
@@ -40,7 +41,7 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-gradient-to-l  from-[#081d1d] to-black">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-8">
+        <div className="container mx-auto flex h-16 lg:h-20 items-center justify-between px-4 sm:px-8">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="flex items-center gap-2">

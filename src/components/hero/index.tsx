@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-[600px] w-full overflow-hidden bg-gradient-to-br from-black via-[#001a1a] to-black px-4 py-16">
+    <section className="relative min-h-[550px] w-full overflow-hidden bg-gradient-to-br from-black via-[#001a1a] to-black px-4 py-16">
       {/* Decorative background curve */}
       <div className="absolute inset-0 z-0">
         <svg
