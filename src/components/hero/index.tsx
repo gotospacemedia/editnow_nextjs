@@ -1,3 +1,5 @@
+import { Button } from "../ui/button";
+
 export default function Hero() {
   return (
     <section className="relative min-h-[550px] w-full overflow-hidden bg-gradient-to-br from-black via-[#001a1a] to-black px-4 py-16">
@@ -53,12 +55,12 @@ export default function Hero() {
 
         {/* CTA buttons */}
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <button className="rounded-full bg-[#7CFFD3] px-6 py-3 font-medium text-black transition-colors hover:bg-[#63E6BA]">
+          <Button className="bg-[#7CFFD3] px-6 py-3 font-medium text-black transition-colors hover:bg-[#63E6BA]">
             Schedule a demo call
-          </button>
-          <button className="rounded-full bg-white/10 px-6 py-3 font-medium text-white transition-colors hover:bg-white/20 backdrop-blur-sm">
+          </Button>
+          <Button className="bg-white/10 px-6 py-3 font-medium text-white hover:text-[#7CFFD3] transition-colors hover:bg-white/20 backdrop-blur-sm">
             Content Calculator
-          </button>
+          </Button>
         </div>
       </div>
     </section>

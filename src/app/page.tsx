@@ -3,6 +3,8 @@ import { getVimeoStories } from "@/lib/vimeo";
 import Hero from "@/components/hero";
 import StoriesSlider from "@/components/stories-slider";
 import GrowingBrandsSlider from "@/components/growing-brands-slider";
+import Faq from "@/components/faq";
+import ComparisonSection from "@/components/comparison-section";
 
 export type Story = {
   video: {
@@ -26,6 +28,8 @@ export default async function Home() {
       <Hero />
       <StoriesSlider stories={response?.data} />
       <GrowingBrandsSlider />
+      <ComparisonSection />
+      <Faq />
     </div>
   );
 }
