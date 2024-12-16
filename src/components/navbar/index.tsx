@@ -15,23 +15,23 @@ import Logo from "../logo";
 const navMenu = [
   {
     label: "Home",
-    link: "#",
+    link: "/",
   },
   {
     label: "Services",
-    link: "#",
+    link: "/#Services",
   },
   {
     label: "Process",
-    link: "#",
+    link: "/#Process",
   },
   {
-    label: "Reviews",
-    link: "#",
+    label: "Portfolio",
+    link: "/portfolio",
   },
   {
     label: "FAQs",
-    link: "#",
+    link: "/#FAQs",
   },
 ];
 
@@ -73,7 +73,7 @@ export default function Navbar() {
 
           {/* Right side buttons */}
           <div className="flex items-center gap-4">
-            <Button className="h-9 bg-[#7CFFD3] text-black hover:bg-[#63E6BA] lg:flex">
+            <Button className="h-9 bg-brand_primary text-black hover:bg-brand_primary/80 lg:flex">
               Demo call
             </Button>
             <button
@@ -111,7 +111,7 @@ export default function Navbar() {
                   className="rounded-lg bg-zinc-800 px-10 py-2.5 text-center text-sm text-white transition-colors hover:bg-zinc-700 hover:text-[#7CFFD3]"
                   onClick={() => setIsOpen(false)}
                 >
-                  Contact Us
+                  Send Email
                 </Link>
               </li>
             </ul>

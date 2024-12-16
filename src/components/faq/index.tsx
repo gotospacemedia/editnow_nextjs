@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Accordion,
   AccordionContent,
@@ -48,30 +46,27 @@ const faqData = [
 
 export default function FAQ() {
   return (
-    <section className="bg-black text-white py-16 md:py-24">
-      <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 md:mb-16">
-          Frequently Asked Questions
-        </h2>
-
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqData.map((faq, index) => (
-              <AccordionItem
-                key={`faq-${index}`}
-                value={`item-${index + 1}`}
-                className="border border-gray-800 rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-lg font-medium py-6 hover:no-underline">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-400 pb-6">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+    <section className="section_wrapper" id="FAQs">
+      <div className="">
+        <h2 className="heading_1">Frequently Asked Questions</h2>
+      </div>
+      <div className="max-w-3xl mx-auto text-white">
+        <Accordion type="single" collapsible className="space-y-4">
+          {faqData.map((faq, index) => (
+            <AccordionItem
+              key={`faq-${index}`}
+              value={`item-${index + 1}`}
+              className="border border-gray-800 rounded-lg px-6"
+            >
+              <AccordionTrigger className="text-lg font-medium py-6 hover:no-underline">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-400 pb-6">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );

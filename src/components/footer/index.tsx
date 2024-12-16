@@ -17,12 +17,8 @@ export default function Footer() {
 
           {/* CTA buttons */}
           <div className="flex items-center justify-center gap-4 ">
-            <Button className="bg-[#7CFFD3] px-6 py-3 font-medium text-black transition-colors hover:bg-[#63E6BA]">
-              Book a demo call
-            </Button>
-            <Button className="bg-white/10 px-6 py-3 font-medium text-white transition-colors hover:bg-white/20 backdrop-blur-sm">
-              Send Email Instead
-            </Button>
+            <Button className="btn_primary">Book a demo call</Button>
+            <Button className="btn_secondary">Send Email Instead</Button>
           </div>
         </div>
 

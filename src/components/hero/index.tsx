@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[550px] w-full overflow-hidden bg-gradient-to-br from-black via-[#001a1a] to-black px-4 py-16">
+    <section className="section_wrapper relative min-h-[550px] overflow-hidden bg-gradient-to-br from-black via-[#001a1a] to-black ">
       {/* Decorative background curve */}
       <div className="absolute inset-0 z-0">
         <svg
@@ -44,7 +44,7 @@ export default function Hero() {
         {/* Main heading */}
         <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl">
           Elevate your content <br /> with{" "}
-          <span className="text-[#7CFFD3]">Edit Now</span>
+          <span className="text-brand_primary">EditNow</span>
         </h1>
 
         {/* Subtitle */}
@@ -55,12 +55,8 @@ export default function Hero() {
 
         {/* CTA buttons */}
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button className="bg-[#7CFFD3] px-6 py-3 font-medium text-black transition-colors hover:bg-[#63E6BA]">
-            Schedule a demo call
-          </Button>
-          <Button className="bg-white/10 px-6 py-3 font-medium text-white hover:text-[#7CFFD3] transition-colors hover:bg-white/20 backdrop-blur-sm">
-            Content Calculator
-          </Button>
+          <Button className="btn_primary">Schedule a demo call</Button>
+          <Button className="btn_secondary">Send Email Instead</Button>
         </div>
       </div>
     </section>

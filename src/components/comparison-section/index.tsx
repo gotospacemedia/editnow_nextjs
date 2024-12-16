@@ -3,18 +3,21 @@ import Logo from "../logo";
 
 export default function ComparisonSectionExact() {
   return (
-    <section className="bg-black text-white py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 md:mb-16">
+    <section className="section_wrapper">
+      <div className="">
+        <h2 className="heading_1">
           EditNow goes just that
           <br />
-          one step further{" "}
+          one step further
         </h2>
-
+      </div>
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row gap-6">
           {/* Other Agencies Column */}
           <div className="flex-1 bg-[#1c1c1c] rounded-2xl p-6">
-            <h2 className="text-2xl font-semibold mb-6">Other agencies</h2>
+            <h4 className="text-2xl text-white font-semibold mb-6">
+              Other agencies
+            </h4>
             <ul className="space-y-4">
               {[
                 "Limited to design or copy only",
@@ -34,7 +37,7 @@ export default function ComparisonSectionExact() {
           </div>
 
           {/* EditFlow Column */}
-          <div className="flex-1 bg-[#98f1e3] text-black rounded-2xl p-6">
+          <div className="flex-1 bg-brand_primary text-black rounded-2xl p-6">
             <div className="flex items-center gap-2 text-2xl font-semibold mb-6">
               <Logo variant="dark" />
             </div>
