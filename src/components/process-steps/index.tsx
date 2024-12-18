@@ -1,4 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { MotionDiv, MotionSection } from "@/framer-motion/elements";
+import {
+  bottomSideVariants,
+  containerVariants,
+  fadeInVariants,
+} from "@/framer-motion/variants";
 
 interface ProcessStep {
   number: number;
@@ -47,25 +53,41 @@ const steps: ProcessStep[] = [
 
 export default function ProcessSteps() {
   return (
-    <section className="section_wrapper" id="Process">
-      <div className="">
-        <h2 className="heading_1">Our process</h2>
+    <MotionSection
+      variants={bottomSideVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="section_wrapper"
+      id="Process"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="">
+          <h2 className="heading_1">Our process</h2>
+        </div>
+        <MotionDiv
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {steps.map((step) => (
+            <MotionDiv variants={fadeInVariants} key={step.number}>
+              <Card className="bg-zinc-900/50 border-zinc-800">
+                <CardHeader>
+                  <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center mb-4">
+                    <span className="text-brand_primary">{step.number}</span>
+                  </div>
+                  <CardTitle className="text-xl text-white">
+                    {step.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-zinc-400">{step.description}</p>
+                </CardContent>
+              </Card>
+            </MotionDiv>
+          ))}
+        </MotionDiv>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {steps.map((step) => (
-          <Card key={step.number} className="bg-zinc-900/50 border-zinc-800">
-            <CardHeader>
-              <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center mb-4">
-                <span className="text-brand_primary">{step.number}</span>
-              </div>
-              <CardTitle className="text-xl text-white">{step.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-zinc-400">{step.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </section>
+    </MotionSection>
   );
 }

@@ -4,6 +4,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { MotionDiv, MotionSection } from "@/framer-motion/elements";
+import {
+  bottomSideVariants,
+  containerVariants,
+  fadeInVariants,
+} from "@/framer-motion/variants";
 
 // FAQ data
 const faqData = [
@@ -46,28 +52,40 @@ const faqData = [
 
 export default function FAQ() {
   return (
-    <section className="section_wrapper" id="FAQs">
-      <div className="">
-        <h2 className="heading_1">Frequently Asked Questions</h2>
-      </div>
-      <div className="max-w-3xl mx-auto text-white">
+    <MotionSection
+      variants={bottomSideVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="section_wrapper"
+      id="FAQs"
+    >
+      <MotionDiv
+        variants={containerVariants}
+        className="max-w-3xl mx-auto text-white"
+      >
+        <div className="">
+          <h2 className="heading_1">Frequently Asked Questions</h2>
+        </div>
+
         <Accordion type="single" collapsible className="space-y-4">
           {faqData.map((faq, index) => (
-            <AccordionItem
-              key={`faq-${index}`}
-              value={`item-${index + 1}`}
-              className="border border-gray-800 rounded-lg px-6"
-            >
-              <AccordionTrigger className="text-lg font-medium py-6 hover:no-underline">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-400 pb-6">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
+            <MotionDiv variants={fadeInVariants} key={`faq-${index}`}>
+              <AccordionItem
+                value={`item-${index + 1}`}
+                className="border border-gray-800 rounded-lg px-6"
+              >
+                <AccordionTrigger className="text-lg font-medium py-6 hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-400 pb-6">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </MotionDiv>
           ))}
         </Accordion>
-      </div>
-    </section>
+      </MotionDiv>
+    </MotionSection>
   );
 }

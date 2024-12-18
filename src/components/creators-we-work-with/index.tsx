@@ -8,6 +8,8 @@ import Image from "next/image";
 import Instagram from "@/assets/social/instagram.svg";
 import Facebook from "@/assets/social/facebook.svg";
 import Tiktok from "@/assets/social/tiktok.svg";
+import { MotionSection } from "@/framer-motion/elements";
+import { leftSideVariants } from "@/framer-motion/variants";
 
 const creators = [
   {
@@ -135,7 +137,13 @@ const creators = [
 
 export default function CreatorsWeWorkWith() {
   return (
-    <section className="section_wrapper overflow-hidden">
+    <MotionSection
+      variants={leftSideVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="section_wrapper"
+    >
       <div>
         <h2 className="heading_1">
           Brands Or Creators <br /> We Have Worked With
@@ -154,7 +162,6 @@ export default function CreatorsWeWorkWith() {
         }}
         freeMode={{
           enabled: true,
-          momentum: false,
         }}
         className="!overflow-visible"
       >
@@ -224,6 +231,6 @@ export default function CreatorsWeWorkWith() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </MotionSection>
   );
 }

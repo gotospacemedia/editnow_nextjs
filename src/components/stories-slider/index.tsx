@@ -5,6 +5,8 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Marquee from "react-fast-marquee";
 import { Story } from "@/lib/vimeo";
+import { MotionSection } from "@/framer-motion/elements";
+import { rightSideVariants } from "@/framer-motion/variants";
 
 const Fancybox = dynamic(() => import("@/components/global/fancybox"), {
   ssr: false,
@@ -21,7 +23,13 @@ export default function StoriesSlider({ stories }: { stories: Story[] }) {
   });
 
   return (
-    <section className="w-full bg-black py-8 overflow-hidden">
+    <MotionSection
+      variants={rightSideVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="w-full bg-[#060606] py-8 overflow-hidden"
+    >
       <Fancybox
         options={{
           Carousel: {
@@ -68,6 +76,6 @@ export default function StoriesSlider({ stories }: { stories: Story[] }) {
           ))}
         </Marquee>
       </Fancybox>
-    </section>
+    </MotionSection>
   );
 }

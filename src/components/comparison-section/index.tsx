@@ -1,20 +1,39 @@
 import { Check, X } from "lucide-react";
 import Logo from "../logo";
+import { MotionDiv, MotionSection } from "@/framer-motion/elements";
+import {
+  containerVariants,
+  fadeInVariants,
+  rightSideVariants,
+} from "@/framer-motion/variants";
 
 export default function ComparisonSectionExact() {
   return (
-    <section className="section_wrapper">
-      <div className="">
-        <h2 className="heading_1">
-          EditNow goes just that
-          <br />
-          one step further
-        </h2>
-      </div>
+    <MotionSection
+      variants={rightSideVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="section_wrapper"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="">
+          <h2 className="heading_1">
+            EditNow goes just that
+            <br />
+            one step further
+          </h2>
+        </div>
+
+        <MotionDiv
+          variants={containerVariants}
+          className="flex flex-col md:flex-row gap-6"
+        >
           {/* Other Agencies Column */}
-          <div className="flex-1 bg-[#1c1c1c] rounded-2xl p-6">
+          <MotionDiv
+            variants={fadeInVariants}
+            className="flex-1 bg-[#1c1c1c] rounded-2xl p-6"
+          >
             <h4 className="text-2xl text-white font-semibold mb-6">
               Other agencies
             </h4>
@@ -34,10 +53,13 @@ export default function ComparisonSectionExact() {
                 </li>
               ))}
             </ul>
-          </div>
+          </MotionDiv>
 
           {/* EditFlow Column */}
-          <div className="flex-1 bg-brand_primary text-black rounded-2xl p-6">
+          <MotionDiv
+            variants={fadeInVariants}
+            className="flex-1 bg-brand_primary text-black rounded-2xl p-6"
+          >
             <div className="flex items-center gap-2 text-2xl font-semibold mb-6">
               <Logo variant="dark" />
             </div>
@@ -58,9 +80,9 @@ export default function ComparisonSectionExact() {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
+          </MotionDiv>
+        </MotionDiv>
       </div>
-    </section>
+    </MotionSection>
   );
 }

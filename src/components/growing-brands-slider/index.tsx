@@ -1,3 +1,5 @@
+import { MotionSection } from "@/framer-motion/elements";
+import { rightSideVariants } from "@/framer-motion/variants";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -35,11 +37,17 @@ const brands = [
 
 export default function GrowingBrandsSlider() {
   return (
-    <section className="w-full flex flex-col md:flex-row gap-5 justify-center items-center bg-black py-10 overflow-hidden">
+    <MotionSection
+      variants={rightSideVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="w-full flex flex-col md:flex-row gap-5 justify-center items-center bg-[#060606] py-10 overflow-hidden"
+    >
       <div className="md:ml-10 lg:ml-40">
-        <h3 className="text-gray-300 min-w-[200px]">
+        <p className="text-gray-300 min-w-[200px]">
           Collaborated with the <br /> fastest-growing brands
-        </h3>
+        </p>
       </div>
       <Marquee
         gradient
@@ -63,6 +71,6 @@ export default function GrowingBrandsSlider() {
           </div>
         ))}
       </Marquee>
-    </section>
+    </MotionSection>
   );
 }

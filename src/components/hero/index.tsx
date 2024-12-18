@@ -1,8 +1,15 @@
+import { MotionDiv, MotionH1, MotionP } from "@/framer-motion/elements";
 import { Button } from "../ui/button";
+import {
+  bottomSideVariants,
+  fadeInVariants,
+  leftSideVariants,
+  rightSideVariants,
+} from "@/framer-motion/variants";
 
 export default function Hero() {
   return (
-    <section className="section_wrapper relative min-h-[550px] overflow-hidden bg-gradient-to-br from-black via-[#001a1a] to-black ">
+    <section className="section_wrapper relative min-h-[550px] overflow-hidden bg-gradient-to-br from-[#060606] via-[#001a1a] to-[#060606] ">
       {/* Decorative background curve */}
       <div className="absolute inset-0 z-0">
         <svg
@@ -21,7 +28,10 @@ export default function Hero() {
 
       <div className="container relative z-10 mx-auto max-w-4xl text-center">
         {/* Revenue badge */}
-        <div className="mb-8 inline-flex items-center rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm">
+        <MotionDiv
+          variants={fadeInVariants}
+          className="mb-8 inline-flex items-center rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
+        >
           <svg
             className="mr-2 h-4 w-4"
             fill="none"
@@ -39,25 +49,34 @@ export default function Hero() {
           <span className="text-sm text-white">
             For brands generating over €50k/month in revenue.
           </span>
-        </div>
+        </MotionDiv>
 
         {/* Main heading */}
-        <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl">
+        <MotionH1
+          variants={leftSideVariants}
+          className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl"
+        >
           Elevate your content <br /> with{" "}
           <span className="text-brand_primary">EditNow</span>
-        </h1>
+        </MotionH1>
 
         {/* Subtitle */}
-        <p className="mb-12 text-lg text-gray-300">
+        <MotionP
+          variants={rightSideVariants}
+          className="mb-12 text-lg text-gray-300"
+        >
           We are Edit Now, a video editing service provider dedicated to
           transforming your creative visions into stunning reality.
-        </p>
+        </MotionP>
 
         {/* CTA buttons */}
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <MotionDiv
+          variants={bottomSideVariants}
+          className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+        >
           <Button className="btn_primary">Schedule a demo call</Button>
           <Button className="btn_secondary">Send Email Instead</Button>
-        </div>
+        </MotionDiv>
       </div>
     </section>
   );

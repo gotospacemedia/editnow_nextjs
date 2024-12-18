@@ -11,6 +11,13 @@ import {
 } from "../ui/navigation-menu";
 import { Button } from "../ui/button";
 import Logo from "../logo";
+import { MotionDiv } from "@/framer-motion/elements";
+import {
+  containerVariants,
+  fadeInVariants,
+  leftSideVariants,
+  rightSideVariants,
+} from "@/framer-motion/variants";
 
 const navMenu = [
   {
@@ -40,18 +47,30 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full bg-gradient-to-l  from-[#081d1d] to-black">
-        <div className="container mx-auto flex h-16 lg:h-20 items-center justify-between px-4 sm:px-8">
+      <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-[#060606] to-[#001a1a]">
+        <MotionDiv
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="container mx-auto flex h-16 lg:h-20 items-center justify-between px-4 sm:px-8"
+        >
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="flex items-center gap-2">
+            <MotionDiv
+              variants={leftSideVariants}
+              className="flex items-center gap-2"
+            >
               <Logo />
-            </div>
+            </MotionDiv>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="mx-6 hidden flex-1 items-center justify-center lg:flex">
-            <div className="rounded-full bg-zinc-800/70 border-2 border-zinc-800 px-4 py-2">
+            <MotionDiv
+              variants={fadeInVariants}
+              className="rounded-full bg-zinc-800/70 border-2 border-zinc-800 px-4 py-2"
+            >
               <NavigationMenu>
                 <NavigationMenuList className="flex space-x-6">
                   {navMenu.map((menu) => (
@@ -68,11 +87,14 @@ export default function Navbar() {
                   ))}
                 </NavigationMenuList>
               </NavigationMenu>
-            </div>
+            </MotionDiv>
           </nav>
 
           {/* Right side buttons */}
-          <div className="flex items-center gap-4">
+          <MotionDiv
+            variants={rightSideVariants}
+            className="flex items-center gap-4"
+          >
             <Button className="h-9 bg-brand_primary text-black hover:bg-brand_primary/80 lg:flex">
               Demo call
             </Button>
@@ -83,8 +105,8 @@ export default function Navbar() {
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-          </div>
-        </div>
+          </MotionDiv>
+        </MotionDiv>
 
         {/* Mobile Navigation Overlay */}
         <div
