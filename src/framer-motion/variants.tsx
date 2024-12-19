@@ -105,7 +105,7 @@ export const leftSideVariants = {
 export const bottomSideVariants = {
   hidden: {
     opacity: 0,
-    y: "30%",
+    y: "20%",
   },
   visible: {
     opacity: 1,
