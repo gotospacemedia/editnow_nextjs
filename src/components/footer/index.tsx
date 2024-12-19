@@ -36,30 +36,24 @@ export default function Footer() {
             variants={rightSideVariants}
             className="flex items-center justify-center gap-4 "
           >
-            <Button className="btn_primary">Book a demo call</Button>
-            <Button className="btn_secondary">Send Email Instead</Button>
+            <Link href="/call">
+              <Button className="btn_primary">Book a demo call</Button>
+            </Link>
+            <Link href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services.">
+              <Button className="btn_secondary">Send Email Instead</Button>
+            </Link>
           </MotionDiv>
         </div>
 
         {/* Bottom section with links*/}
         <MotionDiv
           variants={fadeInVariants}
-          className="flex flex-col sm:flex-row items-center justify-between pt-6 border-t border-gray-800"
+          className="flex flex-col items-center justify-center pt-6 border-t border-gray-800"
         >
           <div className="mb-4 sm:mb-0">
             <p className="text-sm text-gray-400">
               © {new Date().getFullYear()} EditNow
             </p>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <div className="flex gap-6 text-sm text-gray-400">
-              <Link href="#" className="hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="#" className="hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-            </div>
           </div>
         </MotionDiv>
       </MotionDiv>

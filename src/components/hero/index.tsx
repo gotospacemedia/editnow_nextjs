@@ -6,6 +6,7 @@ import {
   leftSideVariants,
   rightSideVariants,
 } from "@/framer-motion/variants";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -74,8 +75,12 @@ export default function Hero() {
           variants={bottomSideVariants}
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <Button className="btn_primary">Schedule a demo call</Button>
-          <Button className="btn_secondary">Send Email Instead</Button>
+          <Link href="/call">
+            <Button className="btn_primary">Schedule a demo call</Button>
+          </Link>
+          <Link href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services.">
+            <Button className="btn_secondary">Send Email Instead</Button>
+          </Link>
         </MotionDiv>
       </div>
     </section>

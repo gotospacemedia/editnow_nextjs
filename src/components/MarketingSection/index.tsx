@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MotionSection } from "@/framer-motion/elements";
 import { leftSideVariants } from "@/framer-motion/variants";
+import Link from "next/link";
 
 export default function MarketingSection() {
   return (
@@ -21,7 +22,9 @@ export default function MarketingSection() {
             In a short 20-minute demo call, we&apos;d love to explain more about
             EditNow and the options we can offer your brand.
           </p>
-          <Button className="btn_primary">Demo call</Button>
+          <Link href={"/call"}>
+            <Button className="btn_primary">Demo call</Button>
+          </Link>
         </div>
       </div>
     </MotionSection>

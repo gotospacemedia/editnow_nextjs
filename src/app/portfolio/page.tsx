@@ -15,7 +15,7 @@ import {
   fadeInVariants,
 } from "@/framer-motion/variants";
 
-export default async function TabsDemo() {
+export default async function Portfolio() {
   const shortFormatVideoresponse = (await getVimeoShortFormatVideo(
     {}
   )) as VimeoResponse;

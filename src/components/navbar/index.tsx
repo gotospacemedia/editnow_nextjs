@@ -53,7 +53,7 @@ export default function Navbar() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="container mx-auto flex h-16 lg:h-20 items-center justify-between px-4 sm:px-8"
+          className="container mx-auto flex h-16 lg:h-20 items-center justify-between px-4 sm:px-8 !overflow-hidden"
         >
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
@@ -95,9 +95,11 @@ export default function Navbar() {
             variants={rightSideVariants}
             className="flex items-center gap-4"
           >
-            <Button className="h-9 bg-brand_primary text-black hover:bg-brand_primary/80 lg:flex">
-              Demo call
-            </Button>
+            <Link href="/call">
+              <Button className="h-9 bg-brand_primary text-black hover:bg-brand_primary/80 lg:flex">
+                Demo call
+              </Button>
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white lg:hidden"
@@ -129,7 +131,7 @@ export default function Navbar() {
               ))}
               <li className="pt-2 mx-auto">
                 <Link
-                  href="#contact"
+                  href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services."
                   className="rounded-lg bg-zinc-800 px-10 py-2.5 text-center text-sm text-white transition-colors hover:bg-zinc-700 hover:text-[#7CFFD3]"
                   onClick={() => setIsOpen(false)}
                 >

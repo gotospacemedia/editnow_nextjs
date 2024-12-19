@@ -73,10 +73,10 @@ body {
 
 @layer utilities {
   .section_wrapper {
-    @apply w-full px-5 lg:px-10 py-16 md:py-20 lg:py-24 bg-[#060606] !overflow-hidden;
+    @apply w-full px-5 lg:px-10 py-16 md:py-20 bg-[#060606] !overflow-hidden;
   }
   .heading_1 {
-    @apply text-4xl md:text-5xl  font-bold text-white text-center mb-12 md:mb-16;
+    @apply text-4xl md:text-5xl font-bold text-white text-center mb-12 md:mb-16;
   }
 
   .btn_primary {
