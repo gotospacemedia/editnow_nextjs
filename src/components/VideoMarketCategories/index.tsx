@@ -30,8 +30,8 @@ const categories = [
     title: "Long Format Videos",
     items: [
       { name: "Vlogs", icon: Video },
-      { name: "Entrepreneurship", icon: Briefcase },
       { name: "Nutrition", icon: Apple },
+      { name: "Entrepreneurship", icon: Briefcase },
       { name: "Documentaries", icon: Film },
     ],
   },
@@ -61,7 +61,7 @@ export default function VideoMarketCategories() {
                   <CardTitle>{category.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {category.items.map((item) => (
                       <div
                         key={item.name}
