@@ -30,8 +30,8 @@ const categories = [
     title: "Long Format Videos",
     items: [
       { name: "Vlogs", icon: Video },
-      { name: "Nutrition", icon: Apple },
       { name: "Entrepreneurship", icon: Briefcase },
+      { name: "Nutrition", icon: Apple },
       { name: "Documentaries", icon: Film },
     ],
   },
