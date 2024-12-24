@@ -12,26 +12,76 @@ const brands = [
 
   {
     id: 2,
-    brand_name: "Sinicare",
-    brand_logo: "/growing-brands/sinicare.png",
+    brand_name: "Banshree",
+    brand_logo: "/growing-brands/banshree.png",
   },
 
   {
     id: 3,
-    brand_name: "Sinicare",
-    brand_logo: "/growing-brands/sinicare.png",
+    brand_name: "Blucheez",
+    brand_logo: "/growing-brands/blucheez.png",
   },
 
   {
     id: 4,
-    brand_name: "Sinicare",
-    brand_logo: "/growing-brands/sinicare.png",
+    brand_name: "Broski-smash",
+    brand_logo: "/growing-brands/broski-smash.png",
   },
 
   {
     id: 5,
-    brand_name: "Sinicare",
-    brand_logo: "/growing-brands/sinicare.png",
+    brand_name: "dressi-dale",
+    brand_logo: "/growing-brands/dressi-dale.png",
+  },
+  {
+    id: 6,
+    brand_name: "fakir-apparels",
+    brand_logo: "/growing-brands/fakir-apparels.png",
+  },
+  {
+    id: 7,
+    brand_name: "free-jeans",
+    brand_logo: "/growing-brands/free-jeans.png",
+  },
+  {
+    id: 8,
+    brand_name: "greenview-golf",
+    brand_logo: "/growing-brands/greenview-golf.png",
+  },
+  {
+    id: 9,
+    brand_name: "jumpfactor",
+    brand_logo: "/growing-brands/jumpfactor.png",
+  },
+  {
+    id: 10,
+    brand_name: "luxury-watches",
+    brand_logo: "/growing-brands/luxury-watches.png",
+  },
+  {
+    id: 11,
+    brand_name: "rahman",
+    brand_logo: "/growing-brands/rahman.png",
+  },
+  {
+    id: 12,
+    brand_name: "sleek",
+    brand_logo: "/growing-brands/sleek.png",
+  },
+  {
+    id: 13,
+    brand_name: "sprezzatura",
+    brand_logo: "/growing-brands/sprezzatura.png",
+  },
+  {
+    id: 14,
+    brand_name: "studio-ombre",
+    brand_logo: "/growing-brands/studio-ombre.png",
+  },
+  {
+    id: 15,
+    brand_name: "yoyoso",
+    brand_logo: "/growing-brands/yoyoso.png",
   },
 ];
 
@@ -56,7 +106,7 @@ export default function GrowingBrandsSlider() {
         gradientWidth={20}
         speed={100}
       >
-        {[...brands, ...brands].map((brand) => (
+        {[...brands].map((brand) => (
           <div
             key={String(Math.random() * brand.id + 2000)}
             className="px-5 md:px-8"

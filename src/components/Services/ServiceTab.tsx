@@ -1,36 +1,19 @@
 "use client";
+
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-import "./service.css";
 import { CalendarDays } from "lucide-react";
 import Image from "next/image";
 
-import AudienceSize from "@/assets/services/audience-size-graphic.png";
 import HoursSaved from "@/assets/services/hours-saved-graphic.png";
 import WatchTime from "@/assets/services/watch-time-graphic.png";
 import { MotionDiv } from "@/framer-motion/elements";
 
+import "./service.css";
+
 export const allIngredients = [
-  {
-    icon: <CalendarDays size={18} />,
-    label: "Content Strategy",
-    content: {
-      image: AudienceSize,
-      title: "Create With Intent",
-      description: (
-        <div>
-          <p>
-            All of our packages include a bespoke content strategy, personalised
-            to your goals. We take the time to understand your brand and ideal
-            audience, as well as what’s working on the major platforms, to map
-            out your content funnel.
-          </p>
-        </div>
-      ),
-    },
-  },
   {
     icon: <CalendarDays size={18} />,
     label: "Long-Form-Content",
@@ -74,8 +57,8 @@ export const allIngredients = [
   },
 ];
 
-const [strategy, longformat, shortformat] = allIngredients;
-export const tabs = [strategy, longformat, shortformat];
+const [longformat, shortformat] = allIngredients;
+export const tabs = [longformat, shortformat];
 
 const ServiceTab = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
@@ -86,15 +69,15 @@ const ServiceTab = () => {
         <ul className="ul">
           {tabs.map((item) => (
             <li
-              key={item.label}
+              key={item?.label}
               className={cn("li", {
                 selected: item === selectedTab,
               })}
               onClick={() => setSelectedTab(item)}
             >
               <div className="flex flex-col justify-center items-center">
-                <div>{item.icon}</div>
-                <div className="text-center">{item.label}</div>
+                <div>{item?.icon}</div>
+                <div className="text-center">{item?.label}</div>
               </div>
 
               {item === selectedTab ? (

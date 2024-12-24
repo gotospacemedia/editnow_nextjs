@@ -48,7 +48,7 @@ export default function Hero() {
             />
           </svg>
           <span className="text-sm text-white">
-            For brands generating over €50k/month in revenue.
+            For brands or creators generating over €50k/month in revenue.
           </span>
         </MotionDiv>
 

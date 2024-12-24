@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MotionDiv, MotionSection } from "@/framer-motion/elements";
 import {
@@ -14,6 +16,10 @@ import {
   Apple,
   Briefcase,
   Film,
+  Headphones,
+  Youtube,
+  Music,
+  ShoppingBag,
 } from "lucide-react";
 
 const categories = [
@@ -24,6 +30,9 @@ const categories = [
       { name: "Lifestyle", icon: Palmtree },
       { name: "Gaming", icon: Gamepad2 },
       { name: "Fashion", icon: Shirt },
+      { name: "Social Reels", icon: Video },
+      { name: "Music", icon: Music },
+      { name: "Product Videos", icon: ShoppingBag },
     ],
   },
   {
@@ -33,6 +42,9 @@ const categories = [
       { name: "Nutrition", icon: Apple },
       { name: "Entrepreneurship", icon: Briefcase },
       { name: "Documentaries", icon: Film },
+      { name: "Podcasts", icon: Headphones },
+      { name: "Short Films", icon: Film },
+      { name: "YouTube Videos", icon: Youtube },
     ],
   },
 ];

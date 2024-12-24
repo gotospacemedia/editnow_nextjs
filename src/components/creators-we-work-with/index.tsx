@@ -8,129 +8,82 @@ import Image from "next/image";
 import Instagram from "@/assets/social/instagram.svg";
 import Facebook from "@/assets/social/facebook.svg";
 import Tiktok from "@/assets/social/tiktok.svg";
+import YouTube from "@/assets/social/youtube.svg";
+import Linkedin from "@/assets/social/linkedin.svg";
 import { MotionSection } from "@/framer-motion/elements";
 import { leftSideVariants } from "@/framer-motion/variants";
 
-const creators = [
+interface CreatorsProps {
+  id: number;
+  name: string;
+  image: string;
+  followers: {
+    facebook?: string;
+    instagram?: string;
+    tiktok?: string;
+    youtube?: string;
+    linkedin?: string;
+  };
+}
+
+const creators: CreatorsProps[] = [
   {
     id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
+    name: "Alex Hormozi",
+    image: "/creators/Alex-Hormozi.png",
     followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
+      facebook: "209K",
+      instagram: "3.1M",
+      youtube: "2.98M",
     },
   },
   {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
+    id: 2,
+    name: "Eric Siu",
+    image: "/creators/Eric-Siu.png",
     followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
+      instagram: "100K",
+      youtube: "164K",
+      linkedin: "47K",
     },
   },
   {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
+    id: 3,
+    name: "Iftekhar Rafsan",
+    image: "/creators/Iftekhar-Rafsan.png",
     followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
+      facebook: "316K",
+      instagram: "869K",
+      youtube: "2.82M",
     },
   },
   {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
+    id: 4,
+    name: "Mumtaheena Chowdhury Toya",
+    image: "/creators/Mumtaheena-Chowdhury-Toya.png",
     followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
+      facebook: "443k",
+      instagram: "2.6M",
+      tiktok: "1.4M",
     },
   },
   {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
+    id: 6,
+    name: "Sabila Nur",
+    image: "/creators/Sabila-Nur.png",
     followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
+      facebook: "3.7M",
+      instagram: "3.3M",
     },
   },
   {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
+    id: 7,
+    name: "Sunehra Tasnim",
+    image: "/creators/Sunehra-Tasnim.png",
     followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
-    },
-  },
-  {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
-    followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
-    },
-  },
-  {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
-    followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
-    },
-  },
-  {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
-    followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
-    },
-  },
-  {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
-    followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
-    },
-  },
-  {
-    id: 1,
-    name: "ALI ABDAAL",
-    image:
-      "https://cdn.prod.website-files.com/61a2a3183305d31a50898082/6456e6e89159470103d9d25d_3.%20ali-abdall-3-p-500.jpeg",
-    followers: {
-      facebook: "2M",
-      instagram: "500K",
-      tiktok: "1M",
+      facebook: "645K",
+      instagram: "594K",
+      youtube: "59k",
     },
   },
 ];
@@ -180,12 +133,12 @@ export default function CreatorsWeWorkWith() {
 
               <div className="absolute bottom-5 w-full px-5 z-10">
                 <div className="w-full flex flex-col justify-center items-center text-white">
-                  <div>
-                    <p className="">{creator.name}</p>
+                  <div className="mb-1">
+                    <h6 className="font-bold uppercase">{creator.name}</h6>
                   </div>
 
                   <div className="flex gap-5">
-                    {creator.followers.facebook && (
+                    {creator.followers?.facebook && (
                       <div className="flex items-center gap-1">
                         <Image
                           src={Facebook}
@@ -197,7 +150,7 @@ export default function CreatorsWeWorkWith() {
                         <span>{creator.followers.facebook}</span>
                       </div>
                     )}
-                    {creator.followers.instagram && (
+                    {creator.followers?.instagram && (
                       <div className="flex items-center gap-1">
                         <Image
                           src={Instagram}
@@ -209,7 +162,7 @@ export default function CreatorsWeWorkWith() {
                         <span>{creator.followers.instagram}</span>
                       </div>
                     )}
-                    {creator.followers.tiktok && (
+                    {creator.followers?.tiktok && (
                       <div className="flex items-center gap-1">
                         <Image
                           src={Tiktok}
@@ -218,7 +171,31 @@ export default function CreatorsWeWorkWith() {
                           height={100}
                           className="h-6 w-6 object-cover"
                         />
-                        <span>{creator.followers.facebook}</span>
+                        <span>{creator.followers.tiktok}</span>
+                      </div>
+                    )}
+                    {creator.followers?.youtube && (
+                      <div className="flex items-center gap-1">
+                        <Image
+                          src={YouTube}
+                          alt="YouTube"
+                          width={100}
+                          height={100}
+                          className="h-6 w-6 object-cover"
+                        />
+                        <span>{creator.followers.youtube}</span>
+                      </div>
+                    )}
+                    {creator.followers?.linkedin && (
+                      <div className="flex items-center gap-1">
+                        <Image
+                          src={Linkedin}
+                          alt="Linkedin"
+                          width={100}
+                          height={100}
+                          className="h-6 w-6 object-cover"
+                        />
+                        <span>{creator.followers.linkedin}</span>
                       </div>
                     )}
                   </div>

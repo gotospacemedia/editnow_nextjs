@@ -13,6 +13,8 @@ const Fancybox = dynamic(() => import("@/components/global/fancybox"), {
 });
 
 export default function StoriesSlider({ stories }: { stories: Story[] }) {
+  console.log(stories);
+
   const filterStoriesData = stories?.map((short) => {
     return {
       id: short?.video?.pictures?.base_link,
