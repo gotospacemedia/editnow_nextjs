@@ -48,16 +48,6 @@ const creators: CreatorsProps[] = [
     },
   },
   {
-    id: 3,
-    name: "Iftekhar Rafsan",
-    image: "/creators/Iftekhar-Rafsan.png",
-    followers: {
-      facebook: "316K",
-      instagram: "869K",
-      youtube: "2.82M",
-    },
-  },
-  {
     id: 4,
     name: "Mumtaheena Chowdhury Toya",
     image: "/creators/Mumtaheena-Chowdhury-Toya.png",
@@ -84,6 +74,33 @@ const creators: CreatorsProps[] = [
       facebook: "645K",
       instagram: "594K",
       youtube: "59k",
+    },
+  },
+  {
+    id: 8,
+    name: "Z O H R A",
+    image: "/creators/ZOHRA.png",
+    followers: {
+      facebook: "180K",
+      instagram: "235K",
+    },
+  },
+  {
+    id: 9,
+    name: "Shoumik Ahmed",
+    image: "/creators/Shoumik-Ahmed.png",
+    followers: {
+      facebook: "227K",
+      instagram: "375K",
+    },
+  },
+  {
+    id: 9,
+    name: "SHARIAAH SHAHNAZ",
+    image: "/creators/SHARIAAH-SHAHNAZ.png",
+    followers: {
+      facebook: "1K",
+      instagram: "92.9K",
     },
   },
 ];

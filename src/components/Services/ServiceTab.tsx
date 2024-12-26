@@ -16,24 +16,6 @@ import "./service.css";
 export const allIngredients = [
   {
     icon: <CalendarDays size={18} />,
-    label: "Long-Form-Content",
-    content: {
-      image: HoursSaved,
-      title: "Streamline Production",
-      description: (
-        <div>
-          <p>
-            Our specialist team can handle the production of your podcast, or
-            take YouTube video editing responsibilities, so that all you need to
-            do is film content. Perhaps you are already monetised and you’re
-            excited about the prospect of doubling down to scale further.
-          </p>
-        </div>
-      ),
-    },
-  },
-  {
-    icon: <CalendarDays size={18} />,
     label: "Short-Form-Content",
     content: {
       image: WatchTime,
@@ -41,15 +23,29 @@ export const allIngredients = [
       description: (
         <div>
           <p>
-            We establish your tone of voice with captivating copywriting that
-            converts, unlocking a goldmine of content that will educate your
-            audience.
+            We specialize in crafting short, snappy videos that grab attention
+            and leave a lasting impression. From TikTok trends to Instagram
+            Reels, we deliver high-quality productions that capture attention
+            and drive results.
           </p>
-          <br />
+        </div>
+      ),
+    },
+  },
+  {
+    icon: <CalendarDays size={18} />,
+    label: "Long-Form-Content",
+    content: {
+      image: HoursSaved,
+      title: "Streamline Production",
+      description: (
+        <div>
           <p>
-            Keeping people watching until the end is a science. We produce
-            engaging clips in your branding and prepare scripts to help you
-            efficiently batch film native content.
+            Cater to the production of longer-length videos, typically exceeding
+            10 minutes. We expertly craft engaging narratives for documentaries,
+            educational videos, and more. From seamless editing and captivating
+            visuals to polished sound design, we deliver high-quality
+            productions that leave a lasting impact.
           </p>
         </div>
       ),

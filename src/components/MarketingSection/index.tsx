@@ -19,7 +19,7 @@ export default function MarketingSection() {
             call to be familiarise with our process
           </h2>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl">
-            In a short 20-minute demo call, we&apos;d love to explain more about
+            In a short 30-minute demo call, we&apos;d love to explain more about
             EditNow and the options we can offer your brand.
           </p>
           <Link href={"/call"}>
