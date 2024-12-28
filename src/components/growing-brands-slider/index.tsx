@@ -13,7 +13,7 @@ const brands = [
   {
     id: 2,
     brand_name: "Blucheez",
-    brand_logo: "/growing-brands/Blucheez.png",
+    brand_logo: "/growing-brands/blucheez.png",
   },
 
   {
