@@ -36,12 +36,12 @@ const brands = [
   {
     id: 6,
     brand_name: "Greenview",
-    brand_logo: "/growing-brands/Greenview.png",
+    brand_logo: "/growing-brands/greenview.png",
   },
   {
     id: 7,
     brand_name: "Jumpfactor",
-    brand_logo: "/growing-brands/Jumpfactor.png",
+    brand_logo: "/growing-brands/jumpfactor.png",
   },
   {
     id: 8,
@@ -51,22 +51,22 @@ const brands = [
   {
     id: 9,
     brand_name: "Ombre",
-    brand_logo: "/growing-brands/Ombre.png",
+    brand_logo: "/growing-brands/ombre.png",
   },
   {
     id: 10,
     brand_name: "Sinicare",
-    brand_logo: "/growing-brands/Sinicare.png",
+    brand_logo: "/growing-brands/sinicare.png",
   },
   {
     id: 11,
     brand_name: "Sleek",
-    brand_logo: "/growing-brands/Sleek.png",
+    brand_logo: "/growing-brands/sleek.png",
   },
   {
     id: 12,
     brand_name: "Sprezzatura",
-    brand_logo: "/growing-brands/Sprezzatura.png",
+    brand_logo: "/growing-brands/sprezzatura.png",
   },
   {
     id: 13,
@@ -76,7 +76,7 @@ const brands = [
   {
     id: 14,
     brand_name: "Unilever",
-    brand_logo: "/growing-brands/Unilever-white.png",
+    brand_logo: "/growing-brands/unilever.png",
   },
 ];
 
