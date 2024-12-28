@@ -31,7 +31,7 @@ export default function Hero() {
         {/* Revenue badge */}
         <MotionDiv
           variants={fadeInVariants}
-          className="mb-8 inline-flex items-center rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
+          className="mb-8 flex flex-col md:flex-row gap-1 items-center rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
         >
           <svg
             className="mr-2 h-4 w-4"
@@ -47,7 +47,7 @@ export default function Hero() {
               d="M13 10V3L4 14h7v7l9-11h-7z"
             />
           </svg>
-          <span className="text-sm text-white">
+          <span className="text-xs md:text-sm text-white">
             For brands or creators generating over €50k/month in revenue.
           </span>
         </MotionDiv>

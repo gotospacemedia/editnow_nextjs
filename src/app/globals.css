@@ -80,9 +80,9 @@ body {
   }
 
   .btn_primary {
-    @apply !bg-brand_primary px-6 py-3 font-medium text-black transition-colors hover:!bg-brand_primary/80;
+    @apply !bg-brand_primary text-base px-6 py-3 font-medium text-black transition-colors hover:!bg-brand_primary/80;
   }
   .btn_secondary {
-    @apply !bg-white/10 px-6 py-3 font-medium text-white transition-colors hover:!bg-white/20 hover:text-brand_primary backdrop-blur-sm;
+    @apply !bg-white/10 text-base px-6 py-3 font-medium text-white transition-colors hover:!bg-white/20 hover:text-brand_primary backdrop-blur-sm;
   }
 }

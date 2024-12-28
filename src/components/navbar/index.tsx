@@ -96,9 +96,7 @@ export default function Navbar() {
             className="flex items-center gap-4"
           >
             <Link href="/call">
-              <Button className="h-9 bg-brand_primary text-black hover:bg-brand_primary/80 lg:flex">
-                Demo call
-              </Button>
+              <Button className="btn_primary !px-4 !py-2">Demo call</Button>
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -132,7 +130,7 @@ export default function Navbar() {
               <li className="pt-2 mx-auto">
                 <Link
                   href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services."
-                  className="rounded-lg bg-zinc-800 px-10 py-2.5 text-center text-sm text-white transition-colors hover:bg-zinc-700 hover:text-brand_primary"
+                  className="rounded-lg bg-zinc-800 text-lg px-10 py-2.5 text-center text-white transition-colors hover:bg-zinc-700 hover:text-brand_primary"
                   onClick={() => setIsOpen(false)}
                 >
                   Send Email
