@@ -31,7 +31,7 @@ export default function Hero() {
         {/* Revenue badge */}
         <MotionDiv
           variants={fadeInVariants}
-          className="mb-8 flex flex-col md:flex-row gap-1 items-center rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
+          className="mb-8 flex flex-col md:flex-row gap-1 items-center justify-center rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm max-w-max mx-auto"
         >
           <svg
             className="mr-2 h-4 w-4"
