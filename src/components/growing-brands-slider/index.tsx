@@ -36,7 +36,7 @@ const brands = [
   {
     id: 6,
     brand_name: "Greenview",
-    brand_logo: "/growing-brands/greenview.png",
+    brand_logo: "/growing-brands/green-view.png",
   },
   {
     id: 7,
@@ -51,7 +51,7 @@ const brands = [
   {
     id: 9,
     brand_name: "Ombre",
-    brand_logo: "/growing-brands/ombre.png",
+    brand_logo: "/growing-brands/ombre-studio.png",
   },
   {
     id: 10,

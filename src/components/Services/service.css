@@ -3,7 +3,7 @@
 }
 
 .nav {
-  @apply bg-[#4b0ddb] text-[#fdfdfd] p-5  overflow-hidden rounded-md;
+  @apply bg-brand_primary text-[#fdfdfd] p-5  overflow-hidden rounded-md;
 }
 
 .ul {
@@ -19,5 +19,5 @@
 }
 
 .tab_container {
-  @apply flex justify-center items-center flex-grow select-none p-5 md:p-10 bg-gradient-to-tr from-purple-600 via-green-800 to-blue-700 rounded-md;
+  @apply flex justify-center items-center flex-grow select-none p-5 md:p-10 bg-gradient-to-tr from-brand_primary/70 via-brand_primary/30 to-brand_primary/70 rounded-md;
 }

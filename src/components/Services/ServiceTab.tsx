@@ -66,7 +66,7 @@ const ServiceTab = () => {
           {tabs.map((item) => (
             <li
               key={item?.label}
-              className={cn("li", {
+              className={cn("li ", {
                 selected: item === selectedTab,
               })}
               onClick={() => setSelectedTab(item)}
