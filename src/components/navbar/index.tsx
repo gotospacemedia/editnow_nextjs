@@ -122,7 +122,7 @@ export default function Navbar() {
                 <li key={menu.label}>
                   <Link
                     href={menu.link}
-                    className="block rounded-lg px-4 py-2.5 text-center text-sm text-zinc-200 transition-colors hover:text-[#7CFFD3]"
+                    className="block rounded-lg px-4 py-2.5 text-center text-sm text-zinc-200 transition-colors hover:text-brand_primary"
                     onClick={() => setIsOpen(false)}
                   >
                     {menu.label}
@@ -132,7 +132,7 @@ export default function Navbar() {
               <li className="pt-2 mx-auto">
                 <Link
                   href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services."
-                  className="rounded-lg bg-zinc-800 px-10 py-2.5 text-center text-sm text-white transition-colors hover:bg-zinc-700 hover:text-[#7CFFD3]"
+                  className="rounded-lg bg-zinc-800 px-10 py-2.5 text-center text-sm text-white transition-colors hover:bg-zinc-700 hover:text-brand_primary"
                   onClick={() => setIsOpen(false)}
                 >
                   Send Email

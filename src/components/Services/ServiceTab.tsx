@@ -19,7 +19,7 @@ export const allIngredients = [
     label: "Short-Form-Content",
     content: {
       image: WatchTime,
-      title: "Copywriting and Clips",
+      title: "Short Form, Big Impact",
       description: (
         <div>
           <p>
@@ -37,7 +37,7 @@ export const allIngredients = [
     label: "Long-Form-Content",
     content: {
       image: HoursSaved,
-      title: "Streamline Production",
+      title: "Beyond The Short Clip",
       description: (
         <div>
           <p>

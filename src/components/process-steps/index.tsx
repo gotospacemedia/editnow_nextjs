@@ -17,37 +17,26 @@ const steps: ProcessStep[] = [
     number: 1,
     title: "Introduction",
     description:
-      "We start with a conversation to get to know your business. What are your goals? What obstacles do you have to overcome? Together we determine if there is a good match.",
+      "We take video and analyze to understand your business better. We start with a conversation to get to know your goals and the obstacles you face. Together, we determine if there's a good fit.",
   },
   {
     number: 2,
     title: "Onboarding",
     description:
-      "After agreement, you get a dedicated contact person who gets to know your brand inside out. Everything is arranged clearly and quickly, so we can get to work quickly.",
+      "After agreement, your dedicated contact person will partner with you. As mentioned in our introduction, we'll begin by analyzing your videos, then discuss your vision, and work together to elevate your content.",
   },
-  {
-    number: 3,
-    title: "Pre-production",
-    description:
-      "We plan shoots, develop scripts, and arrange the best creators and locations for your brand. Within a week, the foundation is in place for successful creatives.",
-  },
+
   {
     number: 4,
-    title: "Production",
+    title: "Post-production",
     description:
-      "We get to work and deliver creative assets that are ready for immediate use in your campaigns. Everything is tailored to enhance your brand.",
+      "We deliver professional video production with expert editing, stunning visuals, and immersive sound. Our team adds polished graphics, music, and sound effects, and fine-tunes color grading for a polished look.",
   },
   {
     number: 5,
     title: "Completion",
     description:
-      "After delivery, you have space to provide feedback. We make sure everything is exactly in line with your vision and goals.",
-  },
-  {
-    number: 6,
-    title: "Testing and optimization",
-    description:
-      "Once creatives go live, we closely monitor performance. Based on the data, we make adjustments as needed, so you always stay on track for growth.",
+      "After delivery, you have space to provide feedback. We make sure everything is exactly in line with your vision and goals. We also welcome video review and correction to ensure the final product meets your expectations perfectly.",
   },
 ];
 
@@ -67,7 +56,7 @@ export default function ProcessSteps() {
         </div>
         <MotionDiv
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {steps.map((step) => (
             <MotionDiv variants={fadeInVariants} key={step.number}>

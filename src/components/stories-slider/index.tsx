@@ -22,7 +22,7 @@ export default function StoriesSlider({ stories }: { stories: Story[] }) {
     };
   });
 
-  console.log(filterStoriesData);
+  // console.log(filterStoriesData);
 
   return (
     <MotionSection
