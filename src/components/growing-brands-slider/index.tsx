@@ -76,7 +76,7 @@ const brands = [
   {
     id: 14,
     brand_name: "Unilever",
-    brand_logo: "/growing-brands/Unilever.png",
+    brand_logo: "/growing-brands/Unilever-white.png",
   },
 ];
 
@@ -107,8 +107,8 @@ export default function GrowingBrandsSlider() {
             className="px-5 md:px-8"
           >
             <Image
-              src={brand.brand_logo}
-              alt={"brand"}
+              src={brand?.brand_logo}
+              alt={brand?.brand_name}
               width={300}
               height={300}
               className="w-[120px] md:w-[150px] lg:w-[160px] object-cover"
