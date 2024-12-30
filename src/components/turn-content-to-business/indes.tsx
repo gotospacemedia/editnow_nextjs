@@ -32,7 +32,7 @@ export default async function TurnContentToBusiness() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="section_wrapper bg-gradient-to-t from-[#060606] via-[#001a1a] to-[#000e0e] text-white"
+      className="section_wrapper bg-gradient-to-t from-[#060606] via-brand_primary/15 to-[#000e0e] text-white"
     >
       <div className="max-w-7xl mx-auto">
         <MotionDiv variants={fadeInVariants}>

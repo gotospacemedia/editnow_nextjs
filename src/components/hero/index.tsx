@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="section_wrapper relative min-h-[550px] overflow-hidden bg-gradient-to-br from-[#060606] via-[#001a1a] to-[#060606] ">
+    <section className="section_wrapper relative min-h-[550px] overflow-hidden bg-gradient-to-br from-[#060606] via-brand_primary/15 to-[#060606] ">
       {/* Decorative background curve */}
       <div className="absolute inset-0 z-0">
         <svg
