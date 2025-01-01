@@ -36,7 +36,9 @@ export default async function TurnContentToBusiness() {
     >
       <div className="max-w-7xl mx-auto">
         <MotionDiv variants={fadeInVariants}>
-          <h2 className="heading_1">Turn your content into a business</h2>
+          <h2 className="heading_1">
+            Grow Your Community with Compelling Video
+          </h2>
         </MotionDiv>
         <MotionDiv
           variants={fadeInVariants}

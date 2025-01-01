@@ -57,7 +57,7 @@ export default function Hero() {
           variants={leftSideVariants}
           className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl"
         >
-          Elevate your content <br /> with{" "}
+          Contents That Drives Growth with{" "}
           <span className="text-brand_primary">EditNow</span>
         </MotionH1>
 
