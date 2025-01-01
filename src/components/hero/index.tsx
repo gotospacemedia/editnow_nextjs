@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MotionDiv, MotionH1, MotionP } from "@/framer-motion/elements";
 import { Button } from "../ui/button";
 import {
@@ -6,7 +7,6 @@ import {
   leftSideVariants,
   rightSideVariants,
 } from "@/framer-motion/variants";
-import Link from "next/link";
 
 export default function Hero() {
   return (

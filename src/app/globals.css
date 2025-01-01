@@ -67,7 +67,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#060606] text-foreground;
   }
 }
 
@@ -85,4 +85,9 @@ body {
   .btn_secondary {
     @apply !bg-white/10 text-base px-6 py-3 font-medium text-white transition-colors hover:!bg-white/20 hover:text-brand_primary backdrop-blur-sm;
   }
+}
+
+/* Extra css */
+.fancybox__content {
+  @apply !aspect-[9/16];
 }
