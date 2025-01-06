@@ -57,7 +57,7 @@ export default function Hero() {
           variants={leftSideVariants}
           className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl"
         >
-          Contents That Drives Growth with{" "}
+          Grow superfast on youtube, instragram, tiktok, linkedin with{" "}
           <span className="text-brand_primary">EditNow</span>
         </MotionH1>
 
@@ -66,8 +66,9 @@ export default function Hero() {
           variants={rightSideVariants}
           className="mb-12 text-lg text-gray-300"
         >
-          We are Edit Now, a video editing service provider dedicated to
-          transforming your creative visions into stunning reality.
+          We are the wizards that transforms your creative vision into stunning
+          reality in lightspeed. Our Expert team handles all for you to generate
+          views and sales.
         </MotionP>
 
         {/* CTA buttons */}
@@ -76,7 +77,7 @@ export default function Hero() {
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Link href="/call">
-            <Button className="btn_primary">Schedule a demo call</Button>
+            <Button className="btn_primary">Schedule a discovery call</Button>
           </Link>
           <Link href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services.">
             <Button className="btn_secondary">Send Email Instead</Button>

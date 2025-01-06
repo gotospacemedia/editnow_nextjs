@@ -66,7 +66,7 @@ export default function VideoMarketCategories() {
     >
       <div className="max-w-7xl mx-auto">
         <div>
-          <h2 className="heading_1">Perfect Market for Video Content</h2>
+          <h2 className="heading_1">Services We Offer</h2>
         </div>
         <MotionDiv
           variants={containerVariants}
