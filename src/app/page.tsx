@@ -9,10 +9,12 @@ import TurnContentToBusiness from "@/components/turn-content-to-business/indes";
 import ProcessSteps from "@/components/process-steps";
 import CreatorsWeWorkWith from "@/components/creators-we-work-with";
 import MarketingSection from "@/components/MarketingSection";
-import VideoMarketCategories from "@/components/VideoMarketCategories";
+import ServicesWeOffer from "@/components/ServicesWeOffer";
 import { MotionDiv } from "@/framer-motion/elements";
 import { containerVariants } from "@/framer-motion/variants";
 import FeatureCards from "@/components/feature-cards";
+import ProcessToGetYouViral from "@/components/ProcessToGetYouViral";
+import FactorsDriveGrowth from "@/components/FactorsDriveGrowth";
 
 export default async function Home() {
   const response = (await getVimeoShortFormatVideo({})) as VimeoResponse;
@@ -28,7 +30,9 @@ export default async function Home() {
       <Hero />
       <StoriesSlider stories={response?.data} />
       <GrowingBrandsSlider />
-      <VideoMarketCategories />
+      <ServicesWeOffer />
+      <ProcessToGetYouViral />
+      <FactorsDriveGrowth />
       <ProcessSteps />
       <FeatureCards />
       <TurnContentToBusiness />

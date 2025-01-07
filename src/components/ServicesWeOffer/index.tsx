@@ -55,7 +55,7 @@ const categories = [
   },
 ];
 
-export default function VideoMarketCategories() {
+export default function ServicesWeOffer() {
   return (
     <MotionSection
       variants={bottomSideVariants}
@@ -63,6 +63,7 @@ export default function VideoMarketCategories() {
       whileInView="visible"
       viewport={{ once: true }}
       className="section_wrapper"
+      id="Services"
     >
       <div className="max-w-7xl mx-auto">
         <div>

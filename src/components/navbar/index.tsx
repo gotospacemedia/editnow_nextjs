@@ -47,7 +47,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-[#060606] to-[#001a1a]">
+      <header className="sticky top-0 z-40 w-full bg-gradient-to-r from-[#060606] to-[#001a1a]">
         <MotionDiv
           variants={containerVariants}
           initial="hidden"
@@ -72,13 +72,13 @@ export default function Navbar() {
               className="rounded-full bg-zinc-800/70 border-2 border-zinc-800 px-4 py-2"
             >
               <NavigationMenu>
-                <NavigationMenuList className="flex space-x-6">
+                <NavigationMenuList className="flex space-x-10">
                   {navMenu.map((menu) => (
                     <NavigationMenuItem key={menu.label}>
                       <NavigationMenuLink asChild>
                         <Link
                           href={menu.link}
-                          className="text-sm font-medium text-zinc-200 transition-colors hover:text-white"
+                          className="font-normal text-center text-zinc-200 transition-colors hover:text-brand_primary"
                         >
                           {menu.label}
                         </Link>
@@ -93,7 +93,7 @@ export default function Navbar() {
           {/* Right side buttons */}
           <MotionDiv
             variants={rightSideVariants}
-            className="flex items-center gap-4"
+            className="flex items-center gap-5"
           >
             <Link href="/call">
               <Button className="btn_primary !px-4 !py-2">Demo call</Button>
@@ -103,7 +103,7 @@ export default function Navbar() {
               className="text-white lg:hidden"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={30} /> : <Menu size={30} />}
             </button>
           </MotionDiv>
         </MotionDiv>
@@ -120,14 +120,14 @@ export default function Navbar() {
                 <li key={menu.label}>
                   <Link
                     href={menu.link}
-                    className="block rounded-lg px-4 py-2.5 text-center text-sm text-zinc-200 transition-colors hover:text-brand_primary"
+                    className="block rounded-lg px-4 py-2.5 text-center text-zinc-200 transition-colors hover:text-brand_primary"
                     onClick={() => setIsOpen(false)}
                   >
                     {menu.label}
                   </Link>
                 </li>
               ))}
-              <li className="pt-2 mx-auto">
+              <li className="pt-5 mx-auto">
                 <Link
                   href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services."
                   className="rounded-lg bg-zinc-800 text-lg px-10 py-2.5 text-center text-white transition-colors hover:bg-zinc-700 hover:text-brand_primary"

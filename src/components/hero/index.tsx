@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MotionDiv, MotionH1, MotionP } from "@/framer-motion/elements";
+import { MotionDiv, MotionP } from "@/framer-motion/elements";
 import { Button } from "../ui/button";
 import {
   bottomSideVariants,
@@ -7,10 +7,17 @@ import {
   leftSideVariants,
   rightSideVariants,
 } from "@/framer-motion/variants";
+import { cn } from "@/lib/utils";
+
+import "./style.css";
+
+// bg-gradient-to-br from-[#060606] via-brand_primary/15 to-[#060606]
 
 export default function Hero() {
   return (
-    <section className="section_wrapper relative min-h-[550px] overflow-hidden bg-gradient-to-br from-[#060606] via-brand_primary/15 to-[#060606] ">
+    <section
+      className={cn("section_wrapper relative min-h-[550px] overflow-hidden")}
+    >
       {/* Decorative background curve */}
       <div className="absolute inset-0 z-0">
         <svg
@@ -21,13 +28,13 @@ export default function Hero() {
         >
           <path
             d="M-200 600 Q 400 -100 1600 400"
-            stroke="rgba(124, 255, 211, 0.1)"
+            stroke="#4e1a3acb"
             strokeWidth="3"
           />
         </svg>
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-4xl text-center">
+      <div className="container relative z-10 mx-auto max-w-4xl text-center h-[37rem]">
         {/* Revenue badge */}
         <MotionDiv
           variants={fadeInVariants}
@@ -53,14 +60,35 @@ export default function Hero() {
         </MotionDiv>
 
         {/* Main heading */}
-        <MotionH1
-          variants={leftSideVariants}
-          className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl"
-        >
-          Grow superfast on youtube, instragram, tiktok, linkedin with{" "}
-          <span className="text-brand_primary">EditNow</span>
-        </MotionH1>
+        <MotionDiv variants={leftSideVariants} className="mb-6">
+          <h1 className="text-[100px]  text-center font-bold text-white capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px] ">
+            Grow superfast
+          </h1>
+          <div className="flex justify-center mt-2">
+            <h1 className="text-[100px]  text-center font-bold text-white capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+              On
+            </h1>
+            <div className="h-[6rem] max-sm:h-[3rem] overflow-hidden words">
+              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+                youtube
+              </p>
+              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+                instragram
+              </p>
+              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+                tiktok
+              </p>
+              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+                linkedin
+              </p>
+            </div>
+          </div>
 
+          <h1 className="text-[100px]  text-center font-bold text-white capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+            with <span className="text-brand_primary">EditNow</span>
+          </h1>
+        </MotionDiv>
+        <br />
         {/* Subtitle */}
         <MotionP
           variants={rightSideVariants}

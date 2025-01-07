@@ -6,30 +6,30 @@ import Image from "next/image";
 import { MotionSection } from "@/framer-motion/elements";
 import { bottomSideVariants } from "@/framer-motion/variants";
 
+const cardsData = [
+  {
+    id: 1,
+    title: "Raw footage",
+    description:
+      "Share your pre-recorded or raw videos in your own unlimited storage Google drive folder.",
+    icon: Drive,
+  },
+  {
+    id: 2,
+    title: "Available 24/7",
+    description: "Contact us regarding anything on WhatsApp whenever you want.",
+    icon: Whatsapp,
+  },
+  {
+    id: 3,
+    title: "Real-time Updates",
+    description:
+      "Check out our personalized CRM system anytime you wanna know about the process.",
+    icon: Sheets,
+  },
+];
+
 export default function FeatureCards() {
-  const cardsData = [
-    {
-      id: 1,
-      title: "Raw footage",
-      description:
-        "Share your pre-recorded or raw videos in your own unlimited storage Google drive folder.",
-      icon: Drive,
-    },
-    {
-      id: 2,
-      title: "Available 24/7",
-      description:
-        "Contact us regarding anything on WhatsApp whenever you want.",
-      icon: Whatsapp,
-    },
-    {
-      id: 3,
-      title: "Real-time Updates",
-      description:
-        "Check out our personalized CRM system anytime you wanna know about the process.",
-      icon: Sheets,
-    },
-  ];
   return (
     <MotionSection
       variants={bottomSideVariants}
