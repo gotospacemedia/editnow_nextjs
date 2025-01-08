@@ -1,11 +1,12 @@
 import { Check, X } from "lucide-react";
-import Logo from "../logo";
 import { MotionDiv, MotionSection } from "@/framer-motion/elements";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import {
   containerVariants,
   fadeInVariants,
   rightSideVariants,
 } from "@/framer-motion/variants";
+import Logo from "../logo";
 
 export default function ComparisonSectionExact() {
   return (
@@ -27,59 +28,65 @@ export default function ComparisonSectionExact() {
 
         <MotionDiv
           variants={containerVariants}
-          className="flex flex-col md:flex-row gap-6"
+          className="flex flex-col md:flex-row gap-5"
         >
           {/* Other Agencies Column */}
-          <MotionDiv
-            variants={fadeInVariants}
-            className="flex-1 bg-[#1c1c1c] rounded-2xl p-6"
-          >
-            <h4 className="text-2xl text-white font-semibold mb-6">
-              Other agencies
-            </h4>
-            <ul className="space-y-4">
-              {[
-                "Limited to design or copy only",
-                "Extremely long delivery times",
-                "Pathways take a long time, little flexibility",
-                "General best practices, little customization",
-                "Little transparency and communication",
-              ].map((text, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <div className="bg-black/30 p-1 rounded-full">
-                    <X className="h-5 w-5 text-white shrink-0" />
-                  </div>
-                  <span className="text-gray-300">{text}</span>
-                </li>
-              ))}
-            </ul>
+          <MotionDiv variants={fadeInVariants} className="flex-1">
+            <Card className="border-gray-700 hover:border-gray-60">
+              <CardHeader>
+                <CardTitle className="text-2xl">Other agencies</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-4">
+                  {[
+                    "Limited to design or copy only",
+                    "Extremely long delivery times",
+                    "Pathways take a long time, little flexibility",
+                    "General best practices, little customization",
+                    "Little transparency and communication",
+                  ].map((text, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center gap-3 text-gray-400"
+                    >
+                      <div className="bg-background p-1 rounded-full">
+                        <X className="h-5 w-5 shrink-0" />
+                      </div>
+                      <span>{text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           </MotionDiv>
 
           {/* EditFlow Column */}
-          <MotionDiv
-            variants={fadeInVariants}
-            className="flex-1 bg-brand_primary text-black rounded-2xl p-6"
-          >
-            <div className="flex items-center gap-2 text-2xl font-semibold mb-6">
-              <Logo variant="dark" />
-            </div>
-
-            <ul className="space-y-4">
-              {[
-                "Creatives that enable performance and scale up",
-                "Fast delivery and adjustment based on data",
-                "In-house team with extensive experience within e-com",
-                "Creatives made specifically for your brand and target audience",
-                "Proactive communication and clear reporting",
-              ].map((text, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="bg-[#119286] p-1 rounded-full">
-                    <Check className="h-5 w-5 text-white shrink-0" />
-                  </div>
-                  <span className="">{text}</span>
-                </li>
-              ))}
-            </ul>
+          <MotionDiv variants={fadeInVariants} className="flex-1">
+            <Card className="bg-brand_primary/70 hover:bg-brand_primary/80 ">
+              <CardHeader>
+                <CardTitle className="text-2xl">
+                  <Logo variant="dark" />
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-4">
+                  {[
+                    "Creatives that enable performance and scale up",
+                    "Fast delivery and adjustment based on data",
+                    "In-house team with extensive experience within e-com",
+                    "Creatives made specifically for your brand and target audience",
+                    "Proactive communication and clear reporting",
+                  ].map((text, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="bg-[#19796f] p-1 rounded-full">
+                        <Check className="h-5 w-5 shrink-0" />
+                      </div>
+                      <span>{text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           </MotionDiv>
         </MotionDiv>
       </div>

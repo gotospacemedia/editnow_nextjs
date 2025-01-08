@@ -10,6 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 
 import "./style.css";
+import { Send } from "lucide-react";
 
 // bg-gradient-to-br from-[#060606] via-brand_primary/15 to-[#060606]
 
@@ -34,16 +35,16 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-4xl text-center h-[37rem]">
+      <div className="container relative mx-auto max-w-4xl text-center">
         {/* Revenue badge */}
         <MotionDiv
           variants={fadeInVariants}
-          className="mb-8 flex flex-col md:flex-row gap-1 items-center justify-center rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm max-w-max mx-auto"
+          className="mb-8 flex flex-col md:flex-row gap-1 items-center justify-center rounded-full bg-zinc-700/70 text-gray-300 px-4 py-2 backdrop-blur-sm max-w-max mx-auto"
         >
           <svg
             className="mr-2 h-4 w-4"
             fill="none"
-            stroke="#fff"
+            stroke=" #d1d5db"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -54,7 +55,7 @@ export default function Hero() {
               d="M13 10V3L4 14h7v7l9-11h-7z"
             />
           </svg>
-          <span className="text-xs md:text-sm text-white">
+          <span className="text-xs md:text-sm">
             For brands or creators generating over €50k/month in revenue.
           </span>
         </MotionDiv>
@@ -92,7 +93,7 @@ export default function Hero() {
         {/* Subtitle */}
         <MotionP
           variants={rightSideVariants}
-          className="mb-12 text-lg text-gray-300"
+          className="mb-12 text-lg text-gray-400"
         >
           We are the wizards that transforms your creative vision into stunning
           reality in lightspeed. Our Expert team handles all for you to generate
@@ -102,13 +103,15 @@ export default function Hero() {
         {/* CTA buttons */}
         <MotionDiv
           variants={bottomSideVariants}
-          className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+          className="w-full flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Link href="/call">
-            <Button className="btn_primary">Schedule a discovery call</Button>
+            <Button className="btn_primary">Schedule a Discovery Call</Button>
           </Link>
           <Link href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services.">
-            <Button className="btn_secondary">Send Email Instead</Button>
+            <Button className="btn_secondary">
+              <Send /> Send Email Instead
+            </Button>
           </Link>
         </MotionDiv>
       </div>

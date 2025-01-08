@@ -47,7 +47,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full bg-gradient-to-r from-[#060606] to-[#001a1a]">
+      <header className="sticky top-0 z-50 w-full bg-background">
         <MotionDiv
           variants={containerVariants}
           initial="hidden"
@@ -78,7 +78,7 @@ export default function Navbar() {
                       <NavigationMenuLink asChild>
                         <Link
                           href={menu.link}
-                          className="font-normal text-center text-zinc-200 transition-colors hover:text-brand_primary"
+                          className="font-normal text-center transition-colors hover:text-brand_primary"
                         >
                           {menu.label}
                         </Link>
@@ -120,7 +120,7 @@ export default function Navbar() {
                 <li key={menu.label}>
                   <Link
                     href={menu.link}
-                    className="block rounded-lg px-4 py-2.5 text-center text-zinc-200 transition-colors hover:text-brand_primary"
+                    className="block rounded-lg px-4 py-2.5 text-center transition-colors hover:text-brand_primary"
                     onClick={() => setIsOpen(false)}
                   >
                     {menu.label}
@@ -130,7 +130,7 @@ export default function Navbar() {
               <li className="pt-5 mx-auto">
                 <Link
                   href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services."
-                  className="rounded-lg bg-zinc-800 text-lg px-10 py-2.5 text-center text-white transition-colors hover:bg-zinc-700 hover:text-brand_primary"
+                  className="rounded-lg bg-zinc-800 text-lg px-10 py-2.5 text-center transition-colors hover:bg-zinc-700 hover:text-brand_primary"
                   onClick={() => setIsOpen(false)}
                 >
                   Send Email
@@ -144,7 +144,7 @@ export default function Navbar() {
       {/* Overlay backdrop */}
       {isOpen && (
         <button
-          className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm lg:hidden"
           onClick={() => setIsOpen(false)}
           onKeyDown={(e) => e.key === "Enter" && setIsOpen(false)}
           aria-label="Close menu"

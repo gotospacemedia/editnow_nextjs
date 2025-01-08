@@ -73,12 +73,12 @@ export default function FAQ() {
             <MotionDiv variants={fadeInVariants} key={`faq-${index}`}>
               <AccordionItem
                 value={`item-${index + 1}`}
-                className="border border-gray-800 rounded-lg px-6"
+                className="border border-gray-700 rounded-lg px-6 bg-background"
               >
                 <AccordionTrigger className="text-lg font-medium py-6 hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 pb-6">
+                <AccordionContent className="text-base text-gray-400 pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

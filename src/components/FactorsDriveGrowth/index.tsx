@@ -97,20 +97,20 @@ export default function FactorsDriveGrowth() {
       className="section_wrapper"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="relative flex justify-between">
-          <h2 className="heading_1 !text-start">
+        <div className="relative flex flex-col md:flex-row items-center md:items-start md:justify-between">
+          <h2 className="heading_1 md:!text-start">
             See the factors that
             <br />
             drive your <span className="text-brand_primary">growth</span>
           </h2>
-          <div className="absolute top-0 right-0 space-x-2">
+          <div className="space-x-2 mb-8">
             <button
               onClick={handlePrev}
               className={`${
                 isBeginning
                   ? "bg-zinc-800  hover:bg-brand_primary/60 cursor-not-allowed"
                   : "bg-zinc-700  hover:!bg-brand_primary"
-              } text-white rounded-full p-2 md:p-4 transition-colors hover:text-black`}
+              } rounded-full p-4 transition-colors`}
               disabled={isBeginning}
             >
               <ChevronLeft className="w-6 h-6 md:w-7 md:h-7" />
@@ -121,7 +121,7 @@ export default function FactorsDriveGrowth() {
                 isEnd
                   ? "bg-zinc-800  hover:bg-brand_primary/60 cursor-not-allowed"
                   : "bg-zinc-700  hover:!bg-brand_primary"
-              } text-white rounded-full p-2 md:p-4 transition-colors hover:text-black`}
+              } rounded-full p-4 transition-colors hover:text-background`}
               disabled={isEnd}
             >
               <ChevronRight className="w-6 h-6  md:w-7 md:h-7" />

@@ -32,7 +32,7 @@ export default async function TurnContentToBusiness() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="section_wrapper bg-gradient-to-t from-[#060606] via-brand_primary/15 to-[#000e0e] text-white"
+      className="section_wrapper"
     >
       <div className="max-w-7xl mx-auto">
         <MotionDiv variants={fadeInVariants}>
@@ -44,7 +44,7 @@ export default async function TurnContentToBusiness() {
           variants={fadeInVariants}
           className="max-w-3xl mx-auto text-center mb-12"
         >
-          <p className="mb-4">
+          <p className="mb-4 text-gray-400">
             We help businesses to build a platform to showcase their work. We
             create your videos tailored to your content and audience. With
             crisp, engaging and addictive visuals our team knows how to create a
@@ -55,7 +55,7 @@ export default async function TurnContentToBusiness() {
         <div className="mt-16">
           <MotionH3
             variants={fadeInVariants}
-            className="text-2xl font-semibold text-center mb-8"
+            className="text-2xl md:text-3xl font-semibold text-center mb-8"
           >
             Our Portfolio
           </MotionH3>
@@ -112,7 +112,7 @@ export default async function TurnContentToBusiness() {
             className="flex justify-center mt-8"
           >
             <Link href={"/portfolio"}>
-              <Button className="btn_primary">View Our Work</Button>
+              <Button className="btn_secondary">View Our Work</Button>
             </Link>
           </MotionDiv>
         </div>

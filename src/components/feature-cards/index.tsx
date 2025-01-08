@@ -37,14 +37,13 @@ export default function FeatureCards() {
       whileInView="visible"
       viewport={{ once: true }}
       className="section_wrapper"
-      id="Process"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid gap-6 md:grid-cols-3 p-4 md:p-6">
+        <div className="grid gap-5 md:grid-cols-3">
           {cardsData.map((card) => (
             <Card
               key={card.id}
-              className="border border-brand_primary/70 hover:border-gray-300 transition-all bg-black/40 backdrop-blur"
+              className="border border-brand_primary/70  hover:border-brand_primary/95 transition-all"
             >
               <CardContent className="pt-6 text-center space-y-4">
                 <div className="rounded-full bg-white w-16 h-16 mx-auto flex items-center justify-center">

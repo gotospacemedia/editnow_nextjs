@@ -26,7 +26,7 @@ export default function StoriesSlider({ stories }: { stories: Story[] }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="w-full bg-[#060606] py-8 overflow-hidden"
+      className="w-full py-8 overflow-hidden"
     >
       <Fancybox
         options={{

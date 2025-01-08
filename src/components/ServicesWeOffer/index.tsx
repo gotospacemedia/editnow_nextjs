@@ -75,7 +75,7 @@ export default function ServicesWeOffer() {
         >
           {categories.map((category) => (
             <MotionDiv variants={fadeInVariants} key={category.title}>
-              <Card>
+              <Card className="border-gray-700 hover:border-gray-600">
                 <CardHeader>
                   <CardTitle>{category.title}</CardTitle>
                 </CardHeader>
@@ -84,7 +84,7 @@ export default function ServicesWeOffer() {
                     {category.items.map((item) => (
                       <div
                         key={item.name}
-                        className="flex items-center p-4 bg-secondary rounded-lg"
+                        className="flex items-center p-4 bg-zinc-900 rounded-lg"
                       >
                         <item.icon className="w-6 h-6 mr-2 text-primary" />
                         <span>{item.name}</span>

@@ -164,7 +164,9 @@ export default function CreatorsWeWorkWith() {
                           height={100}
                           className="h-6 w-6 object-cover"
                         />
-                        <span>{creator.followers.facebook}</span>
+                        <span className="text-gray-300">
+                          {creator.followers.facebook}
+                        </span>
                       </div>
                     )}
                     {creator.followers?.instagram && (
@@ -176,7 +178,9 @@ export default function CreatorsWeWorkWith() {
                           height={100}
                           className="h-6 w-6 object-cover"
                         />
-                        <span>{creator.followers.instagram}</span>
+                        <span className="text-gray-300">
+                          {creator.followers.instagram}
+                        </span>
                       </div>
                     )}
                     {creator.followers?.tiktok && (
@@ -188,7 +192,9 @@ export default function CreatorsWeWorkWith() {
                           height={100}
                           className="h-6 w-6 object-cover"
                         />
-                        <span>{creator.followers.tiktok}</span>
+                        <span className="text-gray-300">
+                          {creator.followers.tiktok}
+                        </span>
                       </div>
                     )}
                     {creator.followers?.youtube && (
@@ -200,7 +206,9 @@ export default function CreatorsWeWorkWith() {
                           height={100}
                           className="h-6 w-6 object-cover"
                         />
-                        <span>{creator.followers.youtube}</span>
+                        <span className="text-gray-300">
+                          {creator.followers.youtube}
+                        </span>
                       </div>
                     )}
                     {creator.followers?.linkedin && (
@@ -210,9 +218,11 @@ export default function CreatorsWeWorkWith() {
                           alt="Linkedin"
                           width={100}
                           height={100}
-                          className="h-6 w-6 object-cover"
+                          className="h-6 w-6 object-cover "
                         />
-                        <span>{creator.followers.linkedin}</span>
+                        <span className="text-gray-300">
+                          {creator.followers.linkedin}
+                        </span>
                       </div>
                     )}
                   </div>

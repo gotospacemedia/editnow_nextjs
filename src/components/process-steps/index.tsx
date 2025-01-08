@@ -60,17 +60,15 @@ export default function ProcessSteps() {
         >
           {steps.map((step) => (
             <MotionDiv variants={fadeInVariants} key={step.number}>
-              <Card className="bg-zinc-900/50 border-zinc-800">
+              <Card className="border-gray-700 hover:border-gray-600">
                 <CardHeader>
                   <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center mb-4">
                     <span className="text-brand_primary">{step.number}</span>
                   </div>
-                  <CardTitle className="text-xl text-white">
-                    {step.title}
-                  </CardTitle>
+                  <CardTitle className="text-xl">{step.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-zinc-400">{step.description}</p>
+                  <p className="text-gray-400">{step.description}</p>
                 </CardContent>
               </Card>
             </MotionDiv>

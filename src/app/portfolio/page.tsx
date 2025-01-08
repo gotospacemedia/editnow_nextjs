@@ -59,7 +59,7 @@ export default async function Portfolio() {
           variants={fadeInVariants}
           className="max-w-3xl mx-auto text-center mb-20"
         >
-          <p className="mb-4">
+          <p className="mb-4 text-gray-400">
             We help businesses to build a platform to showcase their work. We
             create your videos tailored to your content and audience. With
             crisp, engaging and addictive visuals our team knows how to create a
@@ -69,7 +69,7 @@ export default async function Portfolio() {
 
         <MotionDiv variants={bottomSideVariants}>
           {/* Portfolio */}
-          <h3 className="text-2xl font-semibold text-center mb-8 text-white">
+          <h3 className="text-2xl md:text-3xl font-semibold text-center mb-8 text-white">
             Our Portfolio
           </h3>
 

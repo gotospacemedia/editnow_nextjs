@@ -87,10 +87,10 @@ export default function GrowingBrandsSlider() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="w-full flex flex-col md:flex-row gap-5 justify-center items-center bg-[#060606] py-10 overflow-hidden"
+      className="w-full flex flex-col md:flex-row gap-5 justify-center items-center py-10 overflow-hidden"
     >
       <div className="md:ml-10 lg:ml-40">
-        <p className="text-center md:text-start text-gray-300 min-w-[200px]">
+        <p className="text-center md:text-start text-gray-400 min-w-[200px]">
           Collaborated with the <br /> fastest-growing brands
         </p>
       </div>

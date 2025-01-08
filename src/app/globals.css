@@ -6,7 +6,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -34,9 +33,12 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    /* For background pattern */
+    --dot-color: 200, 200, 200;
   }
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 0, 0%, 7%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -60,6 +62,9 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+
+    /* For background pattern */
+    --dot-color: 60, 60, 60;
   }
 }
 
@@ -68,7 +73,13 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-[#060606] text-foreground;
+    @apply bg-background text-foreground;
+
+    background-image: radial-gradient(
+      rgb(var(--dot-color)) 1px,
+      transparent 1px
+    );
+    background-size: 50px 50px;
   }
 }
 
@@ -81,10 +92,10 @@ body {
   }
 
   .btn_primary {
-    @apply !bg-brand_primary text-base px-6 py-3 font-medium text-black transition-colors hover:!bg-brand_primary/80;
+    @apply !bg-brand_primary hover:!bg-brand_primary/80 text-lg px-6 py-7 font-medium text-background transition-colors w-full;
   }
   .btn_secondary {
-    @apply !bg-white/10 text-base px-6 py-3 font-medium text-white transition-colors hover:!bg-white/20 hover:text-brand_primary backdrop-blur-sm;
+    @apply !bg-zinc-800 hover:!bg-zinc-700 text-lg px-7 py-7 font-medium text-white transition-colors  hover:text-brand_primary backdrop-blur-sm w-full;
   }
 }
 

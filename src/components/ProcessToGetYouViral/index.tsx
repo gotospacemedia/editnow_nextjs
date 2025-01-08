@@ -104,20 +104,16 @@ export default function ProcessToGetYouViral() {
       className="section_wrapper"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="relative flex justify-between">
-          <h2 className="heading_1 !text-start">
-            Process
-            <br />
-            To Get You VIRAL :
-          </h2>
-          <div className="absolute top-0 right-0 space-x-2">
+        <div className="relative flex flex-col md:flex-row items-center md:items-start md:justify-between">
+          <h2 className="heading_1 md:!text-start">Process To Get You VIRAL</h2>
+          <div className="space-x-2 mb-8">
             <button
               onClick={handlePrev}
               className={`${
                 isBeginning
                   ? "bg-zinc-800  hover:bg-brand_primary/60 cursor-not-allowed"
                   : "bg-zinc-700  hover:!bg-brand_primary"
-              } text-white rounded-full p-2 md:p-4 transition-colors hover:text-black`}
+              } text-white rounded-full p-4 transition-colors hover:text-black`}
               disabled={isBeginning}
             >
               <ChevronLeft className="w-6 h-6 md:w-7 md:h-7" />
@@ -128,7 +124,7 @@ export default function ProcessToGetYouViral() {
                 isEnd
                   ? "bg-zinc-800  hover:bg-brand_primary/60 cursor-not-allowed"
                   : "bg-zinc-700  hover:!bg-brand_primary"
-              } text-white rounded-full p-2 md:p-4 transition-colors hover:text-black`}
+              } text-white rounded-full p-4 transition-colors hover:text-black`}
               disabled={isEnd}
             >
               <ChevronRight className="w-6 h-6  md:w-7 md:h-7" />
@@ -160,9 +156,9 @@ export default function ProcessToGetYouViral() {
                 className={`${slide.bgColor} rounded-3xl p-8 h-full min-h-[435px] md:min-h-[550px] xl:min-h-[500px] lg flex flex-col  `}
               >
                 <div className="mb-6">
-                  <slide.icon className="w-10 h-10 text-[#232524]" />
+                  <slide.icon className="w-10 h-10 text-background" />
                 </div>
-                <h3 className={`text-2xl mt-5 font-bold text-[#232524]`}>
+                <h3 className={`text-2xl mt-5 font-bold text-background`}>
                   {slide.title}
                 </h3>
                 <p
