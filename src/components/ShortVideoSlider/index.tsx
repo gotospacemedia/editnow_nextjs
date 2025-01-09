@@ -8,7 +8,7 @@ import { MotionSection } from "@/framer-motion/elements";
 import { rightSideVariants } from "@/framer-motion/variants";
 import Fancybox from "../global/fancybox";
 
-export default function StoriesSlider({ stories }: { stories: Story[] }) {
+export default function ShortVideoSlider({ stories }: { stories: Story[] }) {
   const filterStoriesData = stories?.map((short) => {
     return {
       id: short?.video?.pictures?.base_link,
@@ -17,8 +17,6 @@ export default function StoriesSlider({ stories }: { stories: Story[] }) {
       video: short?.video?.link,
     };
   });
-
-  // console.log(filterStoriesData);
 
   return (
     <MotionSection
@@ -39,7 +37,8 @@ export default function StoriesSlider({ stories }: { stories: Story[] }) {
         <Marquee
           gradient
           gradientColor="#131212"
-          gradientWidth={60}
+          gradientWidth={50}
+          pauseOnHover
           autoFill
           speed={100}
         >

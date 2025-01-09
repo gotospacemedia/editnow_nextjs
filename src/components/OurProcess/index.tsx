@@ -40,7 +40,7 @@ const steps: ProcessStep[] = [
   },
 ];
 
-export default function ProcessSteps() {
+export default function OurProcess() {
   return (
     <MotionSection
       variants={bottomSideVariants}

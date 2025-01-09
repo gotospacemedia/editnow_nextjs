@@ -11,7 +11,7 @@ import Tiktok from "@/assets/social/tiktok.svg";
 import YouTube from "@/assets/social/youtube.svg";
 import Linkedin from "@/assets/social/linkedin.svg";
 import { MotionSection } from "@/framer-motion/elements";
-import { leftSideVariants } from "@/framer-motion/variants";
+import { bottomSideVariants } from "@/framer-motion/variants";
 
 interface CreatorsProps {
   id: number;
@@ -108,7 +108,7 @@ const creators: CreatorsProps[] = [
 export default function CreatorsWeWorkWith() {
   return (
     <MotionSection
-      variants={leftSideVariants}
+      variants={bottomSideVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

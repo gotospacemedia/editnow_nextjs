@@ -9,10 +9,9 @@ import {
   containerVariants,
   fadeInVariants,
   leftSideVariants,
-  rightSideVariants,
 } from "@/framer-motion/variants";
 
-export default async function TurnContentToBusiness() {
+export default async function OurPortfolio() {
   const longFormatVideoresponse = (await getVimeoLongFormatVideo({
     per_page: 6,
   })) as VimeoResponse;
@@ -28,7 +27,7 @@ export default async function TurnContentToBusiness() {
 
   return (
     <MotionSection
-      variants={rightSideVariants}
+      variants={leftSideVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

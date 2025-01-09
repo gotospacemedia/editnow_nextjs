@@ -8,11 +8,9 @@ import {
   rightSideVariants,
 } from "@/framer-motion/variants";
 import { cn } from "@/lib/utils";
+import { Phone, Send } from "lucide-react";
 
 import "./style.css";
-import { Send } from "lucide-react";
-
-// bg-gradient-to-br from-[#060606] via-brand_primary/15 to-[#060606]
 
 export default function Hero() {
   return (
@@ -82,6 +80,12 @@ export default function Hero() {
               <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
                 linkedin
               </p>
+              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+                youtube
+              </p>
+              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+                tiktok
+              </p>
             </div>
           </div>
 
@@ -106,7 +110,10 @@ export default function Hero() {
           className="w-full flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Link href="/call">
-            <Button className="btn_primary">Schedule a Discovery Call</Button>
+            <Button className="btn_primary">
+              <Phone />
+              Schedule a Discovery Call
+            </Button>
           </Link>
           <Link href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services.">
             <Button className="btn_secondary">

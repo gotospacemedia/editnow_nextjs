@@ -41,7 +41,7 @@ const ScrollToShowButton: React.FC<ScrollToShowButtonProps> = ({
     >
       <div className="mb-10">
         <Link href={href}>
-          <Button className="btn_secondary hover:!bg-brand_primary hover:!text-white !py-6 !px-12 md:!py-7 md:!px-14 shadow-lg">
+          <Button className="btn_secondary hover:!bg-brand_primary hover:!text-white !py-6 !px-8 md:!py-7 md:!px-14 shadow-lg">
             <Phone /> {buttonText}
           </Button>
         </Link>

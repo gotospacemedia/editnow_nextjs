@@ -1,6 +1,6 @@
 import { getVimeoShortFormatVideo, VimeoResponse } from "@/lib/vimeo";
 
-import StoriesSlider from "@/components/stories-slider";
+import ShortVideoSlider from "@/components/ShortVideoSlider";
 import GrowingBrandsSlider from "@/components/growing-brands-slider";
 
 import { MotionDiv } from "@/framer-motion/elements";
@@ -20,7 +20,7 @@ export default async function DemoCall() {
     >
       <MeetingSchedule />
       <GrowingBrandsSlider />
-      <StoriesSlider stories={response?.data} />
+      <ShortVideoSlider stories={response?.data} />
     </MotionDiv>
   );
 }

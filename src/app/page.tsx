@@ -1,20 +1,20 @@
 import { getVimeoShortFormatVideo, VimeoResponse } from "@/lib/vimeo";
 
 import Hero from "@/components/hero";
-import StoriesSlider from "@/components/stories-slider";
+import ShortVideoSlider from "@/components/ShortVideoSlider";
 import GrowingBrandsSlider from "@/components/growing-brands-slider";
-import Faq from "@/components/faq";
 import ComparisonSection from "@/components/comparison-section";
-import TurnContentToBusiness from "@/components/turn-content-to-business/indes";
-import ProcessSteps from "@/components/process-steps";
+import OurPortfolio from "@/components/OurPortfolio";
+import OurProcess from "@/components/OurProcess";
 import CreatorsWeWorkWith from "@/components/creators-we-work-with";
 import MarketingSection from "@/components/MarketingSection";
 import ServicesWeOffer from "@/components/ServicesWeOffer";
-import { MotionDiv } from "@/framer-motion/elements";
-import { containerVariants } from "@/framer-motion/variants";
 import FeatureCards from "@/components/feature-cards";
 import ProcessToGetYouViral from "@/components/ProcessToGetYouViral";
 import FactorsDriveGrowth from "@/components/FactorsDriveGrowth";
+import Faq from "@/components/faq";
+import { MotionDiv } from "@/framer-motion/elements";
+import { containerVariants } from "@/framer-motion/variants";
 
 export default async function Home() {
   const response = (await getVimeoShortFormatVideo({})) as VimeoResponse;
@@ -28,14 +28,14 @@ export default async function Home() {
       className="!overflow-hidden"
     >
       <Hero />
-      <StoriesSlider stories={response?.data} />
+      <ShortVideoSlider stories={response?.data} />
       <GrowingBrandsSlider />
       <ServicesWeOffer />
       <ProcessToGetYouViral />
       <FactorsDriveGrowth />
-      <ProcessSteps />
+      <OurProcess />
       <FeatureCards />
-      <TurnContentToBusiness />
+      <OurPortfolio />
       <MarketingSection />
       <CreatorsWeWorkWith />
       <ComparisonSection />

@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { MotionSection } from "@/framer-motion/elements";
-import { leftSideVariants } from "@/framer-motion/variants";
+import { rightSideVariants } from "@/framer-motion/variants";
+import { PhoneCall } from "lucide-react";
 import Link from "next/link";
 
 export default function MarketingSection() {
   return (
     <MotionSection
-      variants={leftSideVariants}
+      variants={rightSideVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -23,7 +24,10 @@ export default function MarketingSection() {
             EditNow and the options we can offer your brand.
           </p>
           <Link href={"/call"}>
-            <Button className="btn_primary">Demo call</Button>
+            <Button className="btn_primary">
+              <PhoneCall />
+              Demo call
+            </Button>
           </Link>
         </div>
       </div>

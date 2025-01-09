@@ -9,8 +9,8 @@ import {
 } from "@/framer-motion/variants";
 import ScrollToTop from "react-scroll-to-top";
 import { ChevronsUp } from "lucide-react";
-import "./style.css";
 import ScrollToShowButton from "../ScrollToShowButton";
+import "./style.css";
 
 export default function Footer() {
   return (

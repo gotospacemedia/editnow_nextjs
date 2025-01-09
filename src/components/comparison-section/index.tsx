@@ -4,14 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import {
   containerVariants,
   fadeInVariants,
-  rightSideVariants,
+  leftSideVariants,
 } from "@/framer-motion/variants";
 import Logo from "../logo";
 
 export default function ComparisonSectionExact() {
   return (
     <MotionSection
-      variants={rightSideVariants}
+      variants={leftSideVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -49,7 +49,7 @@ export default function ComparisonSectionExact() {
                       key={index}
                       className="flex items-center gap-3 text-gray-400"
                     >
-                      <div className="bg-background p-1 rounded-full">
+                      <div className="bg-gray-800 p-1 rounded-full">
                         <X className="h-5 w-5 shrink-0" />
                       </div>
                       <span>{text}</span>
@@ -65,7 +65,7 @@ export default function ComparisonSectionExact() {
             <Card className="bg-brand_primary/70 hover:bg-brand_primary/80 ">
               <CardHeader>
                 <CardTitle className="text-2xl">
-                  <Logo variant="dark" />
+                  <Logo variant="light" />
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +78,7 @@ export default function ComparisonSectionExact() {
                     "Proactive communication and clear reporting",
                   ].map((text, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <div className="bg-[#19796f] p-1 rounded-full">
+                      <div className="bg-background p-1 rounded-full">
                         <Check className="h-5 w-5 shrink-0" />
                       </div>
                       <span>{text}</span>

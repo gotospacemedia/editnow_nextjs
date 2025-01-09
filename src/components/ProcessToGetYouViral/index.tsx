@@ -15,7 +15,7 @@ import {
   MousePointerClick,
 } from "lucide-react";
 import { MotionSection } from "@/framer-motion/elements";
-import { bottomSideVariants } from "@/framer-motion/variants";
+import { leftSideVariants } from "@/framer-motion/variants";
 
 // Import Swiper styles
 import "swiper/css";
@@ -97,7 +97,7 @@ export default function ProcessToGetYouViral() {
 
   return (
     <MotionSection
-      variants={bottomSideVariants}
+      variants={leftSideVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

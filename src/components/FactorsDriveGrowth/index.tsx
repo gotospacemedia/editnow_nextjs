@@ -6,7 +6,7 @@ import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { MotionSection } from "@/framer-motion/elements";
-import { bottomSideVariants } from "@/framer-motion/variants";
+import { rightSideVariants } from "@/framer-motion/variants";
 import ViralCard from "./viral-card";
 
 // Import Swiper styles
@@ -20,7 +20,7 @@ export type ViralCardProps = {
   description: string;
 };
 
-export const viralCardData: ViralCardProps[] = [
+const viralCardData: ViralCardProps[] = [
   {
     title: "VIRAL EDITS",
     percentage: "200%",
@@ -90,7 +90,7 @@ export default function FactorsDriveGrowth() {
 
   return (
     <MotionSection
-      variants={bottomSideVariants}
+      variants={rightSideVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
