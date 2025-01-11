@@ -27,42 +27,42 @@ const slides = [
     description:
       "We Help You Sort Out The Best Content That Perfectly Aligns With Your Niche. How? You Answer Us Some Simple Questions And From There We Give You A Detailed Plan With Content Strategies, Competitor Analysis And Proper Keyword Research.",
     icon: Lightbulb,
-    bgColor: "bg-[#DBFA9B]",
+    bgColor: "bg-[#fe3eb4]",
   },
   {
     title: "Press the record button",
     description:
       "Record And Send! Hassle-Free Videos Will Be Ready For You In Less Than 48 Hrs. We Are Always Standby To Help You With Ideas, Gears And Everything Needed To Make You Look Like A Pro. Get A Free Drive Link With Unlimited Storage Just For You.",
     icon: Video,
-    bgColor: "bg-[#CEDCFF]",
+    bgColor: "bg-[#fff]",
   },
   {
     title: "Retention-based video editing",
     description:
       "Keep those eyes locked on your video with our clean and fast retention-based edits. Get your own unique style with the trendiest edits from our animators, not only in the intro but make the entire video locked in your audience's eyes and get the views at lightning speed.",
     icon: MousePointerClick,
-    bgColor: "bg-[#F4F4F2]",
+    bgColor: "bg-[#fe3eb4]",
   },
   {
     title: "Creative thumbnails with your master video",
     description:
       "We make thumbnails that stop your scrolling, make your eyes pop and force you to click on the video! We give you a range of thumbnails to do your A/B testing and check out what works the best for you.",
     icon: Clapperboard,
-    bgColor: "bg-[#DBFA9B]",
+    bgColor: "bg-[#fff]",
   },
   {
     title: "Rank your videos to the top",
     description:
       "Beat your competition and reach the top with our secret SEO strategies. Get more pumped to YouTube's suggested videos. We give you a thorough report of your channel's view count, clickthrough rate, conversion, subscriber count and everything that you can just glance through.",
     icon: Search,
-    bgColor: "bg-[#CEDCFF]",
+    bgColor: "bg-[#fe3eb4]",
   },
   {
     title: "Generate views, watch your channel grow",
     description:
       "We get you the maximum watch time, subscribers, followers that are sure to stick with you for a long long time! We do it all for you from content ideas, to editing, to testing to publishing it in a detailed manner. You just have to sit back, relax and watch yourself at the top of the game.",
     icon: TrendingUp,
-    bgColor: "bg-[#F4F4F2]",
+    bgColor: "bg-[#fff]",
   },
 ];
 

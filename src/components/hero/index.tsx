@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MotionDiv, MotionP } from "@/framer-motion/elements";
+import { Phone, Send } from "lucide-react";
 import { Button } from "../ui/button";
 import {
   bottomSideVariants,
@@ -8,14 +9,13 @@ import {
   rightSideVariants,
 } from "@/framer-motion/variants";
 import { cn } from "@/lib/utils";
-import { Phone, Send } from "lucide-react";
 
 import "./style.css";
 
 export default function Hero() {
   return (
     <section
-      className={cn("section_wrapper relative min-h-[550px] overflow-hidden")}
+      className={cn("relative py-10 px-2 md:min-h-[550px] overflow-hidden")}
     >
       {/* Decorative background curve */}
       <div className="absolute inset-0 z-0">
@@ -37,10 +37,10 @@ export default function Hero() {
         {/* Revenue badge */}
         <MotionDiv
           variants={fadeInVariants}
-          className="mb-8 flex flex-col md:flex-row gap-1 items-center justify-center rounded-full bg-zinc-700/70 text-gray-300 px-4 py-2 backdrop-blur-sm max-w-max mx-auto"
+          className="mb-5 md:mb-8 flex flex-row gap-2 items-center justify-center rounded-full bg-zinc-700/70 text-gray-300 px-4 py-2 backdrop-blur-sm max-w-max mx-auto"
         >
           <svg
-            className="mr-2 h-4 w-4"
+            className="h-4 w-4"
             fill="none"
             stroke=" #d1d5db"
             viewBox="0 0 24 24"
@@ -59,7 +59,7 @@ export default function Hero() {
         </MotionDiv>
 
         {/* Main heading */}
-        <MotionDiv variants={leftSideVariants} className="mb-6">
+        <MotionDiv variants={leftSideVariants} className="md:mb-6">
           <h1 className="text-[100px] max-md:text-[70px] max-sm:text-[50px] text-center font-bold text-white capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px]">
             Grow superfast
           </h1>
@@ -101,27 +101,26 @@ export default function Hero() {
         {/* Subtitle */}
         <MotionP
           variants={rightSideVariants}
-          className="mb-12 text-lg text-gray-400"
+          className="mb-5 md:mb-12 text-lg text-gray-400"
         >
           We are the wizards that transforms your creative vision into stunning
-          reality in lightspeed. Our Expert team handles all for you to generate
-          views and sales.
+          reality in lightspeed.
         </MotionP>
 
         {/* CTA buttons */}
         <MotionDiv
           variants={bottomSideVariants}
-          className="w-full flex flex-col items-center justify-center gap-4 sm:flex-row"
+          className="w-full flex flex-row items-center justify-center gap-4 "
         >
           <Link href="/call">
             <Button className="btn_primary">
               <Phone />
-              Schedule a Discovery Call
+              Book a Call
             </Button>
           </Link>
           <Link href="mailto:hello@editnow.co?subject=Hello%20EditNow&body=I%20would%20like%20to%20inquire%20about%20your%20services.">
             <Button className="btn_secondary">
-              <Send /> Send Email Instead
+              <Send /> Send Email
             </Button>
           </Link>
         </MotionDiv>

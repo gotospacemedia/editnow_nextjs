@@ -123,7 +123,7 @@ export default function Navbar() {
               className="flex items-center gap-5"
             >
               <Link href="/call">
-                <Button className="btn_primary !px-4 !py-2">
+                <Button className="btn_primary !px-4 !py-2 max-sm:text-sm">
                   <PhoneCall /> Demo call
                 </Button>
               </Link>
