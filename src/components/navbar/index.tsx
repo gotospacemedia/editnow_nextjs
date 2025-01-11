@@ -96,7 +96,7 @@ export default function Navbar() {
             <nav className="mx-5 hidden lg:flex flex-1 items-center justify-center">
               <MotionDiv
                 variants={fadeInVariants}
-                className="rounded-full bg-zinc-800/70 border-2 border-zinc-800 px-4 py-2"
+                className="rounded-full bg-zinc-800/70 border-2 border-zinc-800 hover:custom_shadow px-4 py-2"
               >
                 <NavigationMenu>
                   <NavigationMenuList className="flex space-x-10">

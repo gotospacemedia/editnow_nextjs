@@ -1,3 +1,4 @@
+"use client";
 import {
   Accordion,
   AccordionContent,
@@ -10,6 +11,8 @@ import {
   fadeInVariants,
   rightSideVariants,
 } from "@/framer-motion/variants";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 // FAQ data
 const faqData = [
@@ -51,6 +54,12 @@ const faqData = [
 ];
 
 export default function FAQ() {
+  const [activeItem, setActiveItem] = useState<string | null>(null);
+
+  const handleItemClick = (value: string) => {
+    setActiveItem((prevState) => (prevState === value ? null : value));
+  };
+
   return (
     <MotionSection
       variants={rightSideVariants}
@@ -68,22 +77,39 @@ export default function FAQ() {
           <h2 className="heading_1">Frequently Asked Questions</h2>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          {faqData.map((faq, index) => (
-            <MotionDiv variants={fadeInVariants} key={`faq-${index}`}>
-              <AccordionItem
-                value={`item-${index + 1}`}
-                className="border border-gray-700 rounded-lg px-6 bg-background"
-              >
-                <AccordionTrigger className="text-lg font-medium py-6 hover:no-underline">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-base text-gray-400 pb-6">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            </MotionDiv>
-          ))}
+        <Accordion
+          type="single"
+          collapsible
+          onValueChange={setActiveItem}
+          className="space-y-4"
+        >
+          {faqData.map((faq, index) => {
+            const key = `item-${index + 1}`;
+
+            return (
+              <MotionDiv variants={fadeInVariants} key={`faq-${index}`}>
+                <AccordionItem
+                  value={key}
+                  className={cn(
+                    "border border-gray-700 hover:custom_shadow rounded-lg px-6 bg-background",
+                    {
+                      custom_shadow: activeItem === key,
+                    }
+                  )}
+                >
+                  <AccordionTrigger
+                    onClick={() => handleItemClick(key)}
+                    className="text-lg font-medium py-6 hover:no-underline"
+                  >
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-gray-400 pb-6">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </MotionDiv>
+            );
+          })}
         </Accordion>
       </MotionDiv>
     </MotionSection>
