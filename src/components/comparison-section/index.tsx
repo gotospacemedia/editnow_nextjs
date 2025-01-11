@@ -32,18 +32,18 @@ export default function ComparisonSectionExact() {
         >
           {/* Other Agencies Column */}
           <MotionDiv variants={fadeInVariants} className="flex-1">
-            <Card className="border-gray-700 hover:border-gray-60">
+            <Card className="border-gray-700 hover:border-gray-60 hover:custom_shadow">
               <CardHeader>
                 <CardTitle className="text-2xl">Other agencies</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
                   {[
-                    "Limited to design or copy only",
-                    "Extremely long delivery times",
-                    "Pathways take a long time, little flexibility",
-                    "General best practices, little customization",
-                    "Little transparency and communication",
+                    "May be slow to adapt to new trends and technologies.",
+                    "May focus on short–term projects and lack long-term client relationships.",
+                    "May prioritize completing projects over achieving results.",
+                    "May prioritize their own processes over the client’s needs.",
+                    "May experience delays,budget overruns and communication breakdowns during project execution.",
                   ].map((text, index) => (
                     <li
                       key={index}
@@ -62,7 +62,7 @@ export default function ComparisonSectionExact() {
 
           {/* EditFlow Column */}
           <MotionDiv variants={fadeInVariants} className="flex-1">
-            <Card className="bg-brand_primary/70 hover:bg-brand_primary/80 ">
+            <Card className="bg-brand_primary/70 hover:bg-brand_primary/80 hover:custom_shadow">
               <CardHeader>
                 <CardTitle className="text-2xl">
                   <Logo variant="light" />
@@ -71,11 +71,11 @@ export default function ComparisonSectionExact() {
               <CardContent>
                 <ul className="space-y-4">
                   {[
-                    "Creatives that enable performance and scale up",
-                    "Fast delivery and adjustment based on data",
-                    "In-house team with extensive experience within e-com",
-                    "Creatives made specifically for your brand and target audience",
-                    "Proactive communication and clear reporting",
+                    "Stays ahead of the curve by embracing new trends and technologies in the creative space.",
+                    "Builds long-term partnerships with clients based on trust and mutual success.",
+                    "Prioritizes results and demonstrates a clear return on investment.",
+                    "Puts the client’s needs and goals first.",
+                    "EditNow has a robust project management system to ensure projects are delivered on time and within budget,while maintaining high quality standards",
                   ].map((text, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="bg-background p-1 rounded-full">

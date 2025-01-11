@@ -75,7 +75,7 @@ export default function ServicesWeOffer() {
         >
           {categories.map((category) => (
             <MotionDiv variants={fadeInVariants} key={category.title}>
-              <Card className="border-gray-700 hover:border-gray-600">
+              <Card className="border-gray-700 hover:border-gray-600 hover:custom_shadow">
                 <CardHeader>
                   <CardTitle>{category.title}</CardTitle>
                 </CardHeader>

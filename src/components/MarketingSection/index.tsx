@@ -13,7 +13,7 @@ export default function MarketingSection() {
       viewport={{ once: true }}
       className="section_wrapper !py-16"
     >
-      <div className="max-w-7xl mx-auto rounded-3xl p-8 md:p-12 border border-brand_primary/70  hover:border-brand_primary/95 transition-all">
+      <div className="max-w-7xl mx-auto rounded-3xl p-8 md:p-12 border border-brand_primary/70 hover:custom_shadow transition-all">
         <div className="flex flex-col items-center text-center space-y-6">
           <h2 className="text-3xl md:text-5xl font-semibold leading-tight">
             Instead of reading through the details you can also join our demo

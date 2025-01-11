@@ -60,7 +60,7 @@ export default function OurProcess() {
         >
           {steps.map((step) => (
             <MotionDiv variants={fadeInVariants} key={step.number}>
-              <Card className="border-gray-700 hover:border-gray-600">
+              <Card className="border-gray-700 hover:border-gray-600 hover:custom_shadow">
                 <CardHeader>
                   <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center mb-4">
                     <span className="text-brand_primary">{step.number}</span>

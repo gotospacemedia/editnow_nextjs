@@ -134,7 +134,12 @@ export default function ProcessToGetYouViral() {
 
         <Swiper
           modules={[Navigation]}
-          spaceBetween={20}
+          spaceBetween={0}
+          breakpoints={{
+            768: {
+              spaceBetween: 10,
+            },
+          }}
           slidesPerView={"auto"}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;

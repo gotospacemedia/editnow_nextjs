@@ -60,37 +60,41 @@ export default function Hero() {
 
         {/* Main heading */}
         <MotionDiv variants={leftSideVariants} className="mb-6">
-          <h1 className="text-[100px]  text-center font-bold text-white capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px] ">
+          <h1 className="text-[100px] max-md:text-[70px] max-sm:text-[50px] text-center font-bold text-white capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px]">
             Grow superfast
           </h1>
           <div className="flex justify-center mt-2">
-            <h1 className="text-[100px]  text-center font-bold text-white capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
-              On
+            <h1 className="text-[60px] max-md:text-[40px] max-sm:text-[30px]  text-center font-bold text-white capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px] md:mt-3">
+              on
             </h1>
-            <div className="h-[6rem] max-sm:h-[3rem] overflow-hidden words">
-              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+
+            <div className="text-[100px] max-md:text-[70px] max-sm:text-[50px] h-[6rem] max-md:h-[4.5rem]  max-sm:h-[3rem] overflow-hidden words">
+              <p className="ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px]">
                 youtube
               </p>
-              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+              <p className="ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px]">
                 instragram
               </p>
-              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+              <p className="ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px]">
                 tiktok
               </p>
-              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+              <p className="ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px]">
                 linkedin
               </p>
-              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+              <p className="ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px]">
                 youtube
               </p>
-              <p className="text-[100px] ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
+              <p className="ml-8 max-sm:ml-2 text-left font-bold zip capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px]">
                 tiktok
               </p>
             </div>
           </div>
 
-          <h1 className="text-[100px]  text-center font-bold text-white capitalize  leading-[100px] max-sm:leading-[50px] max-sm:text-[50px] max-md:text-[70px]">
-            with <span className="text-brand_primary">EditNow</span>
+          <h1 className="text-[100px] max-md:text-[70px] max-sm:text-[50px] text-center font-bold text-white capitalize  leading-[100px] max-md:leading-[80px] max-sm:leading-[50px]">
+            <span className="text-[60px] max-md:text-[40px] max-sm:text-[30px]">
+              with
+            </span>{" "}
+            <span className="text-brand_primary">EditNow</span>
           </h1>
         </MotionDiv>
         <br />
