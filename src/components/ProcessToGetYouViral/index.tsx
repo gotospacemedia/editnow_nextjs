@@ -135,15 +135,7 @@ export default function ProcessToGetYouViral() {
         <Swiper
           modules={[Navigation]}
           spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1280: {
-              slidesPerView: 3,
-            },
-          }}
+          slidesPerView={"auto"}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -151,9 +143,12 @@ export default function ProcessToGetYouViral() {
           className="relative rounded-3xl"
         >
           {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide
+              key={index}
+              className="!w-[90%] md:!w-[65%] lg:!w-[45%] px-2"
+            >
               <div
-                className={`${slide.bgColor} rounded-3xl p-8 h-full min-h-[435px] md:min-h-[550px] xl:min-h-[500px] lg flex flex-col  `}
+                className={`${slide.bgColor} rounded-3xl p-8 min-h-[460px] md:min-h-[400px] lg flex flex-col  `}
               >
                 <div className="mb-6">
                   <slide.icon className="w-10 h-10 text-background" />

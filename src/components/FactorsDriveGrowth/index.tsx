@@ -132,23 +132,18 @@ export default function FactorsDriveGrowth() {
         <Swiper
           modules={[Navigation]}
           spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1280: {
-              slidesPerView: 3,
-            },
-          }}
+          slidesPerView={"auto"}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
           onSlideChange={handleSlideChange}
-          className="relative rounded-2xl"
+          className="relative rounded-3xl"
         >
           {viralCardData.map((cardData, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide
+              key={index}
+              className="!w-[90%] md:!w-[65%] lg:!w-[45%] px-2"
+            >
               <ViralCard cardData={cardData} />
             </SwiperSlide>
           ))}
