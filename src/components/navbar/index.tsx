@@ -23,10 +23,6 @@ import useScrollHandler from "@/lib/hooks/useScrollHandler";
 
 const navMenu = [
   {
-    label: "Home",
-    link: "/",
-  },
-  {
     label: "Services",
     link: "/#Services",
   },
@@ -37,6 +33,10 @@ const navMenu = [
   {
     label: "Portfolio",
     link: "/portfolio",
+  },
+  {
+    label: "Case Studies",
+    link: "/case-studies",
   },
   {
     label: "FAQs",
