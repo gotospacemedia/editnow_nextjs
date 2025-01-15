@@ -64,12 +64,12 @@ export default function MeetingSchedule() {
 
     // Initialize Cal Embed
     if (window.Cal) {
-      window.Cal("init", "30min-demo-call", { origin: "https://cal.com" });
+      window.Cal("init", "30min-call", { origin: "https://cal.com" });
 
-      window.Cal.ns?.["30min-demo-call"]?.("inline", {
+      window.Cal.ns?.["30min-call"]?.("inline", {
         elementOrSelector: "#my-cal-inline",
         config: { layout: "month_view" },
-        calLink: "editnow/30min-demo-call",
+        calLink: "editnow/30min-call",
       });
     }
   }, []);
