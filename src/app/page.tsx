@@ -1,4 +1,4 @@
-import { getVimeoShortFormatVideo, VimeoResponse } from "@/lib/vimeo";
+import { getVimeoVideo, VimeoResponse } from "@/lib/vimeo";
 
 import Hero from "@/components/hero";
 import ShortVideoSlider from "@/components/ShortVideoSlider";
@@ -15,9 +15,13 @@ import FactorsDriveGrowth from "@/components/FactorsDriveGrowth";
 import Faq from "@/components/faq";
 import { MotionDiv } from "@/framer-motion/elements";
 import { containerVariants } from "@/framer-motion/variants";
+import { vimeoFolderPath } from "@/constant";
 
 export default async function Home() {
-  const response = (await getVimeoShortFormatVideo({})) as VimeoResponse;
+  const response = (await getVimeoVideo({
+    path: vimeoFolderPath.shorts_videos,
+    per_page: 30,
+  })) as VimeoResponse;
 
   return (
     <MotionDiv

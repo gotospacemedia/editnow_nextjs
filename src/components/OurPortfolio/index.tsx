@@ -1,4 +1,4 @@
-import { getVimeoLongFormatVideo, VimeoResponse } from "@/lib/vimeo";
+import { getVimeoVideo, VimeoResponse } from "@/lib/vimeo";
 import { Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,10 +10,12 @@ import {
   fadeInVariants,
   leftSideVariants,
 } from "@/framer-motion/variants";
+import { vimeoFolderPath } from "@/constant";
 
 export default async function OurPortfolio() {
-  const longFormatVideoresponse = (await getVimeoLongFormatVideo({
-    per_page: 6,
+  const longFormatVideoresponse = (await getVimeoVideo({
+    path: vimeoFolderPath.long_videos,
+    per_page: 9,
   })) as VimeoResponse;
 
   const filterLongVideoData = longFormatVideoresponse.data?.map((long) => {
