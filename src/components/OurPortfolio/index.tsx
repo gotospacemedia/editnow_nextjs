@@ -15,7 +15,7 @@ import { vimeoFolderPath } from "@/constant";
 export default async function OurPortfolio() {
   const longFormatVideoresponse = (await getVimeoVideo({
     path: vimeoFolderPath.long_videos,
-    per_page: 9,
+    per_page: 3,
   })) as VimeoResponse;
 
   const filterLongVideoData = longFormatVideoresponse.data?.map((long) => {
@@ -113,7 +113,7 @@ export default async function OurPortfolio() {
             className="flex justify-center mt-8"
           >
             <Link href={"/portfolio"}>
-              <Button className="btn_secondary">View Our Work</Button>
+              <Button className="btn_secondary">View All</Button>
             </Link>
           </MotionDiv>
         </div>

@@ -1,6 +1,6 @@
-import { getVimeoVideo, VimeoResponse } from "@/lib/vimeo";
-
+import { Suspense } from "react";
 import Hero from "@/components/hero";
+import LoadingSlider from "@/components/global/LoadingSlider";
 import ShortVideoSlider from "@/components/ShortVideoSlider";
 import GrowingBrandsSlider from "@/components/growing-brands-slider";
 import ComparisonSection from "@/components/comparison-section";
@@ -18,11 +18,6 @@ import { containerVariants } from "@/framer-motion/variants";
 import { vimeoFolderPath } from "@/constant";
 
 export default async function Home() {
-  const response = (await getVimeoVideo({
-    path: vimeoFolderPath.shorts_videos,
-    per_page: 30,
-  })) as VimeoResponse;
-
   return (
     <MotionDiv
       variants={containerVariants}
@@ -32,7 +27,9 @@ export default async function Home() {
       className="!overflow-hidden"
     >
       <Hero />
-      <ShortVideoSlider stories={response?.data} />
+      <Suspense fallback={<LoadingSlider />}>
+        <ShortVideoSlider path={vimeoFolderPath.shorts_videos} />
+      </Suspense>
       <GrowingBrandsSlider />
       <ServicesWeOffer />
       <ProcessToGetYouViral />

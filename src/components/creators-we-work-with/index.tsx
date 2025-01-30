@@ -39,6 +39,26 @@ const creators: CreatorsProps[] = [
   },
   {
     id: 2,
+    name: "Andrew Huberman",
+    image: "/creators/Andrew-Huberman.png",
+    followers: {
+      instagram: "7.2M",
+      youtube: "6.51M",
+      linkedin: "2M",
+    },
+  },
+  {
+    id: 3,
+    name: "Chris Williamson",
+    image: "/creators/Chris-Williamson.png",
+    followers: {
+      facebook: "K",
+      instagram: "M",
+      youtube: "M",
+    },
+  },
+  {
+    id: 4,
     name: "Eric Siu",
     image: "/creators/Eric-Siu.png",
     followers: {
@@ -48,7 +68,27 @@ const creators: CreatorsProps[] = [
     },
   },
   {
-    id: 4,
+    id: 5,
+    name: "Gary Vaynerchuk",
+    image: "/creators/Gary-Vaynerchuk.png",
+    followers: {
+      facebook: "K",
+      instagram: "M",
+      youtube: "M",
+    },
+  },
+  {
+    id: 6,
+    name: "Jordan Peterson",
+    image: "/creators/Jordan-Peterson.png",
+    followers: {
+      facebook: "K",
+      instagram: "M",
+      youtube: "M",
+    },
+  },
+  {
+    id: 7,
     name: "Mumtaheena Toya",
     image: "/creators/Mumtaheena-Chowdhury-Toya.png",
     followers: {
@@ -58,7 +98,17 @@ const creators: CreatorsProps[] = [
     },
   },
   {
-    id: 6,
+    id: 8,
+    name: "Ricky Zhang",
+    image: "/creators/Ricky-Zhang.png",
+    followers: {
+      facebook: "K",
+      instagram: "M",
+      youtube: "M",
+    },
+  },
+  {
+    id: 9,
     name: "Sabila Nur",
     image: "/creators/Sabila-Nur.png",
     followers: {
@@ -67,7 +117,25 @@ const creators: CreatorsProps[] = [
     },
   },
   {
-    id: 7,
+    id: 10,
+    name: "SHARIAAH SHAHNAZ",
+    image: "/creators/SHARIAAH-SHAHNAZ.png",
+    followers: {
+      facebook: "1K",
+      instagram: "92.9K",
+    },
+  },
+  {
+    id: 11,
+    name: "Shoumik Ahmed",
+    image: "/creators/Shoumik-Ahmed.png",
+    followers: {
+      facebook: "227K",
+      instagram: "375K",
+    },
+  },
+  {
+    id: 12,
     name: "Sunehra Tasnim",
     image: "/creators/Sunehra-Tasnim.png",
     followers: {
@@ -77,30 +145,12 @@ const creators: CreatorsProps[] = [
     },
   },
   {
-    id: 8,
+    id: 13,
     name: "Fatema Tuz ZOHRA",
     image: "/creators/ZOHRA.png",
     followers: {
       facebook: "180K",
       instagram: "235K",
-    },
-  },
-  {
-    id: 9,
-    name: "Shoumik Ahmed",
-    image: "/creators/Shoumik-Ahmed.png",
-    followers: {
-      facebook: "227K",
-      instagram: "375K",
-    },
-  },
-  {
-    id: 9,
-    name: "SHARIAAH SHAHNAZ",
-    image: "/creators/SHARIAAH-SHAHNAZ.png",
-    followers: {
-      facebook: "1K",
-      instagram: "92.9K",
     },
   },
 ];
@@ -141,8 +191,7 @@ export default function CreatorsWeWorkWith() {
               <Image
                 src={creator.image}
                 alt={creator.name}
-                width={500}
-                height={625}
+                fill
                 className="h-full w-full object-cover"
               />
 
