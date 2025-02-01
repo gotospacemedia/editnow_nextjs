@@ -28,7 +28,9 @@ export default async function Home() {
     >
       <Hero />
       <Suspense fallback={<LoadingSlider />}>
-        <ShortVideoSlider path={vimeoFolderPath.shorts_videos} />
+        <ShortVideoSlider
+          path={vimeoFolderPath.editnow_frontpage_shorts_videos}
+        />
       </Suspense>
       <GrowingBrandsSlider />
       <ServicesWeOffer />
