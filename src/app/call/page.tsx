@@ -7,6 +7,7 @@ import MeetingSchedule from "@/components/MeetingSchedule";
 import { vimeoFolderPath } from "@/constant";
 import { Suspense } from "react";
 import LoadingSlider from "@/components/global/LoadingSlider";
+import SendGTMEvent from "@/components/GTM/SendGTMEvent";
 
 export default async function DemoCall() {
   return (
@@ -17,6 +18,7 @@ export default async function DemoCall() {
       viewport={{ once: true }}
       className="!overflow-hidden"
     >
+      <SendGTMEvent params={{ event: "Contact" }} />
       <MeetingSchedule />
       <GrowingBrandsSlider />
       <Suspense fallback={<LoadingSlider />}>

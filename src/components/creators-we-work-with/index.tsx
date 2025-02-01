@@ -52,9 +52,9 @@ const creators: CreatorsProps[] = [
     name: "Chris Williamson",
     image: "/creators/Chris-Williamson.png",
     followers: {
-      facebook: "K",
-      instagram: "M",
-      youtube: "M",
+      facebook: "273K",
+      instagram: "2.4M",
+      youtube: "3.28M",
     },
   },
   {
@@ -72,9 +72,9 @@ const creators: CreatorsProps[] = [
     name: "Gary Vaynerchuk",
     image: "/creators/Gary-Vaynerchuk.png",
     followers: {
-      facebook: "K",
-      instagram: "M",
-      youtube: "M",
+      instagram: "10.4M",
+      youtube: "4.56M",
+      linkedin: "6M",
     },
   },
   {
@@ -82,31 +82,31 @@ const creators: CreatorsProps[] = [
     name: "Jordan Peterson",
     image: "/creators/Jordan-Peterson.png",
     followers: {
-      facebook: "K",
-      instagram: "M",
-      youtube: "M",
+      instagram: "8.8M",
+      youtube: "8.6M",
     },
   },
   {
     id: 7,
-    name: "Mumtaheena Toya",
-    image: "/creators/Mumtaheena-Chowdhury-Toya.png",
+    name: "Ricky Zhang",
+    image: "/creators/Ricky-Zhang.png",
     followers: {
-      facebook: "443k",
-      instagram: "2.6M",
-      tiktok: "1.4M",
+      instagram: "19.8K",
+      youtube: "36.7K",
+      linkedin: "1.33K",
     },
   },
   {
     id: 8,
-    name: "Ricky Zhang",
-    image: "/creators/Ricky-Zhang.png",
+    name: "Mumtaheena Toya",
+    image: "/creators/Mumtaheena-Chowdhury-Toya.png",
     followers: {
-      facebook: "K",
-      instagram: "M",
-      youtube: "M",
+      facebook: "443K",
+      instagram: "2.6M",
+      tiktok: "1.4M",
     },
   },
+
   {
     id: 9,
     name: "Sabila Nur",
@@ -141,7 +141,7 @@ const creators: CreatorsProps[] = [
     followers: {
       facebook: "645K",
       instagram: "594K",
-      youtube: "59k",
+      youtube: "59K",
     },
   },
   {
