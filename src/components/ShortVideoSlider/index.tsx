@@ -38,7 +38,7 @@ export default async function ShortVideoSlider({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="w-full py-8 overflow-hidden custom_shadow"
+      className="w-full my-8 overflow-hidden custom_shadow"
     >
       <Fancybox
         options={{

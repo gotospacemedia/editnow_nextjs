@@ -15,7 +15,7 @@ import FactorsDriveGrowth from "@/components/FactorsDriveGrowth";
 import Faq from "@/components/faq";
 import { MotionDiv } from "@/framer-motion/elements";
 import { containerVariants } from "@/framer-motion/variants";
-import { vimeoFolderPath } from "@/constant";
+import { editnow_frontpage_shorts_videos } from "@/constant";
 
 export default async function Home() {
   return (
@@ -28,9 +28,7 @@ export default async function Home() {
     >
       <Hero />
       <Suspense fallback={<LoadingSlider />}>
-        <ShortVideoSlider
-          path={vimeoFolderPath.editnow_frontpage_shorts_videos}
-        />
+        <ShortVideoSlider path={editnow_frontpage_shorts_videos} />
       </Suspense>
       <GrowingBrandsSlider />
       <ServicesWeOffer />
