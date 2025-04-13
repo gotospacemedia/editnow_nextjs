@@ -27,13 +27,13 @@ const steps: ProcessStep[] = [
   },
 
   {
-    number: 4,
+    number: 3,
     title: "Post-production",
     description:
       "We deliver professional video production with expert editing, stunning visuals, and immersive sound. Our team adds polished graphics, music, and sound effects, and fine-tunes color grading for a polished look.",
   },
   {
-    number: 5,
+    number: 4,
     title: "Completion",
     description:
       "After delivery, you have space to provide feedback. We make sure everything is exactly in line with your vision and goals. We also welcome video review and correction to ensure the final product meets your expectations perfectly.",
