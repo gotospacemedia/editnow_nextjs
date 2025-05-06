@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { Play } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -12,8 +13,7 @@ import { getVimeoVideo, type VimeoResponse } from "@/lib/vimeo";
 import Fancybox from "@/components/global/fancybox";
 import { useMemo, memo } from "react";
 import { JsVimeoFolderKey, jsVimeoFolderPath } from "@/constant";
-import PotImage from "@/assets/extra/jobyer-siam.jpg";
-import { Metadata } from "next";
+import JsImage from "@/assets/extra/jobyer-siam.jpg";
 
 const folderKeys = Object.keys(jsVimeoFolderPath) as JsVimeoFolderKey[];
 
@@ -32,26 +32,30 @@ export default function Portfolio() {
       viewport={{ once: true }}
       className="!overflow-hidden"
     >
-      <section className="section_wrapper">
-        <div className="container mx-auto flex flex-col md:flex-row gap-5 lg:gap-10 text-white">
+      <section className="section_wrapper !pb-0 !pt-[2rem]">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-5 lg:gap-10 text-white">
           <MotionDiv
             variants={fadeInVariants}
-            className="w-full md:flex-1 lg:max-w-[400px] xl:max-w-[450px] flex flex-col justify-center items-center "
+            className="w-full md:max-w-[300px] xl:max-w-[350px] flex flex-col justify-center items-center "
           >
-            <Image src={PotImage} alt="Pot" className="rounded-3xl w-full" />
+            <Image
+              src={JsImage}
+              alt="Jobyer Siam"
+              className="rounded-3xl w-full"
+            />
           </MotionDiv>
 
           <div className="flex-1 flex flex-col justify-center">
             <MotionDiv variants={fadeInVariants}>
               <h2 className="text-3xl md:text-4xl mb-5 uppercase font-visby font-bold">
                 Hello! <br /> I&apos;m{" "}
-                <span className="bg-gradient-to-b from-[#eeb6d9] to-[#af1e78d8] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-b from-[#eeb6d9] to-[#a11a6ed8] bg-clip-text text-transparent">
                   Jobyer Siam
                 </span>
               </h2>
             </MotionDiv>
-            <MotionDiv variants={fadeInVariants} className="max-w-3xl mb-10">
-              <p className="mb-4 text-gray-400">
+            <MotionDiv variants={fadeInVariants} className="max-w-3xl">
+              <p className="text-gray-400">
                 As a professional video editor, I bring stories to life through
                 precise cuts, rhythm, and visual impact. My portfolio reflects a
                 range of creative collaborations and high-quality edits.
@@ -61,7 +65,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="section_wrapper text-white">
+      <section className="section_wrapper mt-0 pt-0 text-white">
         <MotionDiv variants={bottomSideVariants}>
           <h3 className="text-2xl md:text-3xl font-semibold text-center mb-8 text-white">
             My Portfolio

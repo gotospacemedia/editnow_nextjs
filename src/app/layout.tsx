@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
-import "./globals.css";
 import localFont from "next/font/local";
+import "./globals.css";
 
 const visby = localFont({
   src: [
@@ -50,16 +49,6 @@ const visby = localFont({
   variable: "--font-visby",
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: "EditNow",
   description:
@@ -73,9 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${visby.variable} antialiased`}
-      >
+      <body className={`${visby.variable} antialiased`}>
         <GoogleTagManager gtmId={String(process.env.NEXT_PUBLIC_GTM_ID)} />
 
         {children}
