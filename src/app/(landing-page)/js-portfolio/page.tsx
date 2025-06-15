@@ -79,7 +79,7 @@ export default function Portfolio() {
           >
             <ScrollArea className="w-full max-w-max mx-auto">
               <TabsList className="inline-flex h-16 items-center justify-start bg-transparent p-0">
-                    {memoizedFolderKeys?.slice(0, 1)?.map((folder) => (
+                {memoizedFolderKeys?.slice(0, 1)?.map((folder) => (
                   <TabsTrigger
                     key={folder}
                     value={folder}
@@ -114,14 +114,14 @@ export default function Portfolio() {
             {/* Vimeo Video Content */}
             {memoizedFolderKeys?.map((folder) => (
               <TabsContent key={folder} value={folder}>
-                <VimeoVideoContent path={jsVimeoFolderPath[folder]} />
+                <VimeoVideoContent path={jsVimeoFolderPath[folder]} dataFancyBox={folder} />
               </TabsContent>))}
 
             {/* Youtube Video Content */}
             <TabsContent
               key={"long_videos"}
               value={"long_videos"}>
-              <YoutubeVideoContent videoList={yt_videoList} />
+              <YoutubeVideoContent videoList={yt_videoList} dataFancyBox="long_videos" />
 
             </TabsContent>
 
