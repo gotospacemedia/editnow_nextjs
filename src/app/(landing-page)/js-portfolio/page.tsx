@@ -1,6 +1,6 @@
+import { useMemo } from "react";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Play } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { MotionDiv } from "@/framer-motion/elements";
@@ -9,10 +9,9 @@ import {
   containerVariants,
   fadeInVariants,
 } from "@/framer-motion/variants";
-import { getVimeoVideo, type VimeoResponse } from "@/lib/vimeo";
-import Fancybox from "@/components/global/fancybox";
-import { useMemo, memo } from "react";
-import { JsVimeoFolderKey, jsVimeoFolderPath } from "@/constant";
+import { JsVimeoFolderKey, jsVimeoFolderPath, yt_videoList } from "@/constant";
+import VimeoVideoContent from "@/components/video/VimeoVideoContent";
+import YoutubeVideoContent from "@/components/video/YoutubeVideoContent";
 import JsImage from "@/assets/extra/jobyer-siam.jpg";
 
 const folderKeys = Object.keys(jsVimeoFolderPath) as JsVimeoFolderKey[];
@@ -20,6 +19,9 @@ const folderKeys = Object.keys(jsVimeoFolderPath) as JsVimeoFolderKey[];
 export const metadata: Metadata = {
   title: "Js Portfolio",
 };
+
+
+
 
 export default function Portfolio() {
   const memoizedFolderKeys = useMemo(() => folderKeys, []);
@@ -77,7 +79,7 @@ export default function Portfolio() {
           >
             <ScrollArea className="w-full max-w-max mx-auto">
               <TabsList className="inline-flex h-16 items-center justify-start bg-transparent p-0">
-                {memoizedFolderKeys.map((folder) => (
+                    {memoizedFolderKeys?.slice(0, 1)?.map((folder) => (
                   <TabsTrigger
                     key={folder}
                     value={folder}
@@ -86,13 +88,44 @@ export default function Portfolio() {
                     {folder.split("_").join(" ")}
                   </TabsTrigger>
                 ))}
+
+                <TabsTrigger
+                  key={"long_videos"}
+                  value={"long_videos"}
+                  className="capitalize"
+                >
+                  Long Videos
+                </TabsTrigger>
+
+                {memoizedFolderKeys?.slice(1)?.map((folder) => (
+                  <TabsTrigger
+                    key={folder}
+                    value={folder}
+                    className="capitalize"
+                  >
+                    {folder.split("_").join(" ")}
+                  </TabsTrigger>
+                ))}
+
               </TabsList>
               <ScrollBar orientation="horizontal" />
             </ScrollArea>
 
-            {memoizedFolderKeys.map((folder) => (
-              <TabsContentWrapper key={folder} folder={folder} />
-            ))}
+            {/* Vimeo Video Content */}
+            {memoizedFolderKeys?.map((folder) => (
+              <TabsContent key={folder} value={folder}>
+                <VimeoVideoContent path={jsVimeoFolderPath[folder]} />
+              </TabsContent>))}
+
+            {/* Youtube Video Content */}
+            <TabsContent
+              key={"long_videos"}
+              value={"long_videos"}>
+              <YoutubeVideoContent videoList={yt_videoList} />
+
+            </TabsContent>
+
+
           </Tabs>
         </MotionDiv>
       </section>
@@ -100,77 +133,6 @@ export default function Portfolio() {
   );
 }
 
-interface VideoItem {
-  id: string;
-  name: string;
-  thumbnail: string;
-  video: string;
-}
 
-const VideoItem = memo(({ story }: { story: VideoItem }) => (
-  <div className="w-full h-full">
-    <a href={story.video} data-fancybox="shortformat" className="w-full h-full">
-      <button className="w-full h-full relative overflow-hidden rounded-2xl border-0">
-        <Image
-          src={story.thumbnail || "/placeholder.svg"}
-          alt={story.name}
-          width={500}
-          height={700}
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/20">
-          <div
-            className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition-transform hover:scale-110"
-            aria-hidden="true"
-          >
-            <Play className="h-6 w-6" />
-          </div>
-        </div>
-      </button>
-    </a>
-  </div>
-));
 
-VideoItem.displayName = "VideoItem";
 
-const TabsContentWrapper = memo(({ folder }: { folder: JsVimeoFolderKey }) => {
-  return (
-    <TabsContent key={folder} value={folder}>
-      <VideoContent folder={folder} />
-    </TabsContent>
-  );
-});
-
-TabsContentWrapper.displayName = "TabsContentWrapper";
-
-const VideoContent = async ({ folder }: { folder: JsVimeoFolderKey }) => {
-  const vimeoResponse = (await getVimeoVideo({
-    path: jsVimeoFolderPath[folder],
-    per_page: 100,
-  })) as VimeoResponse;
-
-  const filterVideoData =
-    vimeoResponse.data?.map((long) => ({
-      id: long?.video?.pictures?.base_link ?? "",
-      name: long?.video?.name ?? "",
-      thumbnail: long?.video?.pictures?.base_link ?? "",
-      video: long?.video?.link ?? "",
-    })) ?? [];
-
-  return (
-    <Fancybox
-      options={{
-        Carousel: {
-          infinite: false,
-          Thumbs: false,
-        },
-      }}
-    >
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
-        {filterVideoData.map((story) => (
-          <VideoItem key={story.id} story={story} />
-        ))}
-      </div>
-    </Fancybox>
-  );
-};
