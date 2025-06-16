@@ -48,7 +48,7 @@ export default function Portfolio() {
               alt="Jobyer Siam"
               className="rounded-3xl w-full md:hidden"
             />
-                       <Image
+            <Image
               src={JsImage}
               alt="Jobyer Siam"
               className="rounded-3xl w-full hidden md:block"
@@ -82,21 +82,11 @@ export default function Portfolio() {
           </h3>
 
           <Tabs
-            defaultValue={memoizedFolderKeys[0]}
+            defaultValue={'long_videos'}
             className="container mx-auto text-white"
           >
             <ScrollArea className="w-full max-w-max mx-auto">
               <TabsList className="inline-flex h-16 items-center justify-start bg-transparent p-0">
-                {memoizedFolderKeys?.slice(0, 1)?.map((folder) => (
-                  <TabsTrigger
-                    key={folder}
-                    value={folder}
-                    className="capitalize"
-                  >
-                    {folder.split("_").join(" ")}
-                  </TabsTrigger>
-                ))}
-
                 <TabsTrigger
                   key={"long_videos"}
                   value={"long_videos"}
@@ -105,7 +95,7 @@ export default function Portfolio() {
                   Long Videos
                 </TabsTrigger>
 
-                {memoizedFolderKeys?.slice(1)?.map((folder) => (
+                {memoizedFolderKeys?.map((folder) => (
                   <TabsTrigger
                     key={folder}
                     value={folder}
