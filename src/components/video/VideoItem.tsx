@@ -35,6 +35,6 @@ const VideoItem = memo(({ story, dataFancyBox }: { story: VideoItem, dataFancyBo
   </div>
 ));
 
-
+VideoItem.displayName = "VideoItem"
 
 export default VideoItem

@@ -88,7 +88,7 @@ export default async function CaseStudies() {
           </h3>
 
           <div className="container mx-auto">
-            <YoutubeVideoContent videoList={yt_videoList} />
+          <YoutubeVideoContent videoList={yt_videoList} dataFancyBox="caseStudies" />
           </div>
         </MotionDiv>
       </section>
