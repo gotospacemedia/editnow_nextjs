@@ -23,8 +23,8 @@ export type JsVimeoFolderKey =
   | "product_videos";
 
 export const jsVimeoFolderPath: Record<JsVimeoFolderKey, string> = {
-  shorts: "/users/232053563/projects/23274712/items",
-  corporate_videos: "/users/232053563/projects/25653824/items",
+  shorts: "/users/232053563/projects/25658603/items",
+  corporate_videos: "/users/232053563/projects/25653095/items",
   fashion: "/users/232053563/projects/23922213/items",
   product_videos: "/users/232053563/projects/23922215/items",
 };
