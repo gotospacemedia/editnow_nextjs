@@ -12,7 +12,10 @@ import {
 import { JsVimeoFolderKey, jsVimeoFolderPath, yt_videoList } from "@/constant";
 import VimeoVideoContent from "@/components/video/VimeoVideoContent";
 import YoutubeVideoContent from "@/components/video/YoutubeVideoContent";
+
+import JsImageMobile from "@/assets/extra/jobyer-siam-mobile.jpg";
 import JsImage from "@/assets/extra/jobyer-siam.jpg";
+
 
 const folderKeys = Object.keys(jsVimeoFolderPath) as JsVimeoFolderKey[];
 
@@ -41,9 +44,14 @@ export default function Portfolio() {
             className="w-full md:max-w-[300px] xl:max-w-[350px] flex flex-col justify-center items-center "
           >
             <Image
+              src={JsImageMobile}
+              alt="Jobyer Siam"
+              className="rounded-3xl w-full md:hidden"
+            />
+                       <Image
               src={JsImage}
               alt="Jobyer Siam"
-              className="rounded-3xl w-full"
+              className="rounded-3xl w-full hidden md:block"
             />
           </MotionDiv>
 
@@ -67,9 +75,9 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="section_wrapper mt-0 pt-0 text-white">
+      <section className="section_wrapper mt-0 !pt-[2rem] text-white">
         <MotionDiv variants={bottomSideVariants}>
-          <h3 className="text-2xl md:text-3xl font-semibold text-center mb-8 text-white">
+          <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4 md:mb-8 text-white">
             My Portfolio
           </h3>
 
